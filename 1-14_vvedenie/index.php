@@ -48,7 +48,7 @@ background
 
 !!!  Последовательность должна быть такой background-image, background-color (потому что пока картинка не загрузилась, будет показываться цвет).
 
-background-clip : border-box - картика может задезать на border
+background-clip : border-box - картика может залезать на border
 				  padding-box - картинка может залезать на padding
 				  content-box  - картинка только в облости content
 
@@ -80,7 +80,7 @@ float - выдерни из потока.
 
 
 !!! Чтобы отменить обтекание (схлопывание) нужно использоватть clear:both.
-!!! Применяется к элменту, указанному после обтекаемых элементов.
+!!! Применяется к элемнту, указанному после обтекаемых элементов.
 <div>
 	<div class="float-left"></div>
 	<div class="float-right"></div>
@@ -96,7 +96,7 @@ li - внути не желательно p и заголовки
 	 Блочный, display: list-item, благодаря этому выводятся маркеры или цифры.
 	Но они выводятся на месте padding у ul(ol).
 
-css только для стилей
+css только для списков (ul, ol)
  list-style-position  - (inside/outside) маркеры принадлежат к ul или li
  list-style-type
  list-style-image
