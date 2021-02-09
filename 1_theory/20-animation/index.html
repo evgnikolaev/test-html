@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		@keyframes showtext {
+			0% {
+				opacity: 20%;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+
+		@keyframes myanim {
+			0% {
+				background-color: red;
+			}
+			20% {
+				border-radius: 100px;
+				background-color: yellow;
+			}
+			100% {
+				border-radius: 1px;
+				background-color: green;
+				opacity: 1;
+			}
+		}
+
+		div {
+			height: 200px;
+			width: 200px;
+			background-color: red;
+			animation: myanim 5s ease-in alternate, showtext 5s;
+		}
+
+	</style>
+</head>
+<body>
+
+<div><span>text text text</span></div>
+</body>
+</html>

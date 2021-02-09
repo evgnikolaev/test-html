@@ -1,0 +1,17 @@
+.bordered {
+  border: 1px solid #000;
+}
+
+.inline-block( @valign:top ) {
+  display: inline-block;
+  vertical-align: @valign;
+}
+
+.img-container {
+  .inline-block;
+  width: 80px;
+}
+
+.box {
+  .inline-block(middle);
+}
