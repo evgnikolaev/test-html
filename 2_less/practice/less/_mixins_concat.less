@@ -1,0 +1,34 @@
+// пример2. конкатенация строк
+@pathToIcon: 'img/tmp/';
+@iconW: 400px;
+
+.icon(@url) {
+  display: inline-block;
+  width: @iconW;
+  background: url("@{pathToIcon}@{url}.png"); //конкатенация строк
+}
+
+.header {
+  .icon('logo');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

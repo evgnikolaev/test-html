@@ -1,0 +1,40 @@
+// пример3. выполнение миксина при условии
+
+.fontSize(@fs) when (isnumber(@fs)) {
+  font-size: ~"@{fs}px"; // ~  !убирает кавычки после конкатенации
+}
+
+html {
+  .fontSize(12);
+}
+
+
+// пример4. Циклы, сетка
+
+@tablet-width: 1170px;
+@phone-width: 768px;
+
+@columnCount: 12;
+
+.grid(@name, @columnNumber:1) when (@columnNumber<=@columnCount) {
+  .@{name}@{columnNumber} {
+    width: (100%/@columnCount)*@columnNumber;
+  }
+
+  .grid (@name, @columnNumber+1); //цикл
+}
+
+//вызов
+.grid(xs);
+@media screen and (min-width: @phone-width) {
+  .grid(sm);
+}
+
+@media screen and (min-width: @tablet-width) {
+  .grid(lg);
+}
+
+
+
+
+
