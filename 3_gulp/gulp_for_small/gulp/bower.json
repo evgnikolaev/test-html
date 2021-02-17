@@ -1,0 +1,21 @@
+{
+  "name": "test--gulp.bx",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "evg <evg-nik@list.ru>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "magnific-popup": "^1.1.0"
+  }
+}

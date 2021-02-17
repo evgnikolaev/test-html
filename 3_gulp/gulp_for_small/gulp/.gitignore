@@ -1,0 +1,12 @@
+                # Created by https://www.gitignore.io/api/bitrix
+                #Exclude all of core files
+/node_modules/*
+                # Misc unused files
+*.log
+*.xml
+                # End of https://www.gitignore.io/api/bitrix
+/.idea/*
+*/libs/*
+*.gz
+*.sql
+*.gz*
