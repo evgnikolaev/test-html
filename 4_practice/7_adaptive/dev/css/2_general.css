@@ -1,0 +1,43 @@
+.container {
+	width: 95%;
+	margin: 0 auto;
+}
+
+.header {
+	background-color: #3f4142;
+	padding: 10px 0;
+	text-align: center;
+}
+
+.header-box {
+	margin: 0 auto;
+	margin-bottom: 12px;
+}
+
+
+.logo {
+	background: #cccccc;
+	width: 160px;
+	height: 23px;
+	display: inline-block;
+}
+
+.button {
+	display: inline-block;
+	background: #f1addd;
+	width: 255px;
+	height: 50px;
+	text-align: center;
+	line-height:50px;
+	font-size: 18px;
+}
+
+
+.phone {
+	display: inline-block;
+	padding-left: 30px;
+	background: #cdd;
+	width: 150px;
+	height: 50px;
+	line-height:50px;
+}
