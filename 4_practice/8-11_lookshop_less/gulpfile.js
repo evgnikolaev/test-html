@@ -7,6 +7,14 @@ var connect = require('gulp-connect');
 var livereload = require('gulp-livereload');
 var spritesmith = require('gulp.spritesmith');
 var rename = require('gulp-rename');
+var plumber = require('gulp-plumber');
+
+gulp.task('connect', function () {
+	connect.server({
+		root: 'build',
+		livereload: true
+	});
+});
 
 gulp.task('spriteCreator', function () {
 	var spriteData = gulp.src('dev/img/icons/*.png').pipe(spritesmith({
@@ -22,43 +30,25 @@ gulp.task('spriteCreator', function () {
 
 
 gulp.task('cssCreator', function () {
-	return gulp.src('dev/less/general.less')
-		.pipe(less())
-		.pipe(gulp.dest('build/css'))
-		.pipe(connect.reload());
+	return gulp.src('dev/less/general.less').pipe(plumber()).pipe(less()).pipe(gulp.dest('build/css')).pipe(connect.reload());
 });
 
-
-
-gulp.task('connect', function () {
-	connect.server({
-		root: 'build',
-		livereload: true
-	});
-});
-
-
-gulp.task('htmlIncluder', function () {
-	gulp.src('dev/**/*.html')
-		.pipe(includer())
-		.pipe(replace({
-			css: 'css/bundle.css'
-		}))
-		.pipe(gulp.dest('build/'))
-		.pipe(connect.reload());
+gulp.task('htmlCreator', function () {
+	gulp.src('dev/**/*.html').pipe(includer()).pipe(gulp.dest('build/')).pipe(connect.reload());
 });
 
 
 gulp.task('default', function () {
 
-	gulp.start('connect', 'concatCss', 'htmlIncluder');
+	gulp.start('spriteCreator','connect', 'cssCreator', 'htmlCreator');
 
 	gulp.watch(['dev/**/*.html'], function (event) {
-		gulp.start('htmlIncluder');
+		gulp.start('htmlCreator');
 	});
-	gulp.watch(['dev/**/*.css'], function (event) {
-		gulp.start('concatCss');
+	gulp.watch(['dev/**/*.less'], function (event) {
+		gulp.start('cssCreator');
 	});
+
 });
 
 

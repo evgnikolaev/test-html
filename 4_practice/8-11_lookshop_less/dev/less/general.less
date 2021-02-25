@@ -1,0 +1,39 @@
+@import "imports/reset";
+@import "imports/_settings";
+@import "imports/_mixins";
+@import "imports/sprite";
+
+//-------  grid  --------
+.row:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.col {
+  float: left;
+}
+
+.grid-univers(xs, 2);
+@media screen and(min-width: 768px) {
+  .grid-univers(m, 9)
+}
+
+@media screen and(min-width: 970px) {
+  .grid-univers(l, 12)
+}
+
+//-------  common  --------
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@import "imports/header";
