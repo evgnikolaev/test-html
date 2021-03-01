@@ -1,7 +1,26 @@
 @import "imports/reset";
 @import "imports/_settings";
+@import "imports/_fonts";
 @import "imports/_mixins";
 @import "imports/sprite";
+
+body {
+  font-family: @base-ff;
+  font-size: @base-fs;
+}
+
+@import "imports/icons";
+
+//-------  container  --------
+.container {
+  margin: 0 auto;
+  @media screen and(min-width: @width-large) {
+    width: @width-large;
+    padding: 0;
+  }
+
+}
+
 
 //-------  grid  --------
 .row:after {
@@ -35,5 +54,6 @@
 .text-center {
   text-align: center;
 }
+
 
 @import "imports/header";

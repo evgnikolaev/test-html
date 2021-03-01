@@ -1,27 +1,205 @@
 .header {
   background: #fff;
+  margin-bottom: 20px;
 
   &-top {
     background: #000;
+    font-size: 1.9rem;
+    text-transform: uppercase;
+    @media screen and (min-width: @width-tablet) {
+      margin-bottom: 20px;
+      font-size: 0.68rem;
+    }
+
+    &-group {
+      text-align: center;
+
+      &-item {
+        box-sizing: border-box;
+        .inline-block;
+        border-left: 2px solid #444444;
+        padding: 35px 30px;
+        color: @base-color;
+
+        &:first-child {
+          border-left: none;
+        }
+
+        @media screen and (min-width: @width-tablet) {
+          padding: 10px;
+          height: 34px;
+          &:first-child {
+            border-left: 2px solid #444444;
+          }
+
+          &:last-child {
+            border-right: 2px solid #444444;
+          }
+        }
+      }
+
+      .dropdown {
+        .dropdown-icon(#ffffff);
+      }
+
+      .account {
+        .icon {
+          margin-right: 25px;
+          @media screen and (min-width: @width-tablet) {
+            margin-right: 7px;
+          }
+        }
+
+        .icon-account {
+          background-position: -26px -30px;
+          width: 14px;
+          height: 11px;
+        }
+      }
+
+      .search {
+        .icon-search {
+          background-position: -16px -27px;
+          width: 14px;
+          height: 11px;
+        }
+      }
+
+      @media screen and (min-width: @width-tablet) {
+        text-align: right;
+      }
+    }
+
   }
 
-  &-pad_top {
-    padding-top: 37px;
-  }
+  //----------------------------
 
-  &-box {
-    .inline-block;
-    color: #fff;
-    border-left: 2px solid #444444;
-
-    &:first-child {
-      border-left: none;
+  &-bottom {
+    padding: 0 2%;
+    @media screen and (min-width: @width-large) {
+      padding: 0;
     }
   }
 
   .custom {
     .text-center;
-    text-transform: uppercase;
+    box-sizing: border-box;
+    background: @base-color;
     color: #838383;
+    padding: 35px 0;
+    @media screen and (min-width: @width-tablet) {
+      padding: 10px 0;
+      background: #000000;
+      color: @base-color;
+    }
+  }
+
+  .logo {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 5.75rem;
+    color: #000;
+    text-align: center;
+    padding: 53px 0;
+    text-decoration: none;
+    display: block;
+
+    .big-logo {
+      display: none;
+    }
+
+    @media screen and (min-width: @width-tablet) {
+      text-align: left;
+      padding: 20px 0 0 0;
+      span, .small-logo {
+        display: none;
+      }
+
+      .big-logo {
+        display: block;
+      }
+    }
+  }
+
+
+  .cart {
+    margin-bottom: 25px;
+    @media screen and (min-width: @width-tablet) {
+      margin-bottom: 0;
+      float: right;
+    }
+
+    &-wrap {
+      color: #949393;
+      line-height: 95px;
+      @media screen and (min-width: @width-tablet) {
+        line-height: 30px;
+      }
+    }
+
+    &-list {
+      display: none;
+      border: 1px solid #d6d6d6;
+      border-bottom: none;
+      height: 32px;
+      line-height: 32px;
+      padding: 0 10px;
+      font-size: 0.6875rem;
+      @media screen and (min-width: @width-tablet) {
+        display: block;
+      }
+
+      .dropdown {
+        .dropdown-icon(#c1c1c1);
+      }
+
+    }
+
+    &-info {
+      height: 95px;
+      line-height: 95px;
+      padding: 0 30px;
+      text-align: right;
+      background: #fafafa;
+      border: 1px solid #d6d6d6;
+      color: #949393;
+      text-transform: uppercase;
+      font-size: 1.9rem;
+      font-family: @base-ff;
+
+      .icon {
+        float: left;
+      }
+
+      @media screen and (min-width: @width-tablet) {
+        height: 32px;
+        line-height: 32px;
+        padding: 0 10px;
+        font-size: 0.6875rem;
+      }
+    }
   }
 }
+
+// 12 минут
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -38,7 +38,7 @@ http://joxi.ru/Q2Kvbk4HvgbVPm
 
 box-sizing : content-box - высота и ширина по content
 		     border-box - по border
-			 padding-box - по paddinf
+			 padding-box - по padding
 
 
 -----------------------------------   3) background   --------------------------------------------

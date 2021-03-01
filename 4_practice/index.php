@@ -50,7 +50,7 @@ http://psdmania.ru/psd_maketi_saitov/3427-natgeo-redesign.html     (  4-6_NatGeo
 	Шрифты
 	Размеры
 	Иконки
-
+	цвета
 
 
 

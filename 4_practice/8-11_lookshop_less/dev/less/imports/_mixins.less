@@ -1,12 +1,26 @@
 .grid-univers(@name, @count,@i:1) when (@i <= @count) {
   .@{name}@{i} {
-    width:(@i/@count)*100%;
+    width: (@i/@count)*100%;
   }
 
-  .grid-univers(@name, @count,@i+1);
+  .grid-univers(@name, @count, @i+1);
 }
 
-.inline-block(@va:top){
+.inline-block(@va:top) {
   display: inline-block;
   vertical-align: @va;
+}
+
+.dropdown-icon(@color) {
+  position: relative;
+  padding-right: 18px;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    right: 0;
+    border: 8px solid transparent;
+    border-top-color: @color;
+  }
 }
