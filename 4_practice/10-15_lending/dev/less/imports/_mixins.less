@@ -1,0 +1,17 @@
+.inline-block(@va:top) {
+  display: inline-block;
+  vertical-align: @va;
+}
+
+.iconBack(@iconName) {
+  background: url("@{pathToIcons}/icon-@{iconName}.png") no-repeat center;
+}
+
+.grid(@name, @pad, @columnNum:1) when (@columnNum <= @column-count) {
+  .@{name}-@{columnNum} {
+    width: (@columnNum/@column-count)*100%;
+    padding: 0 @pad;
+  }
+
+  .grid(@name, @pad, @columnNum+1);
+}

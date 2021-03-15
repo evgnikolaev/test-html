@@ -1,0 +1,43 @@
+.fullHeight {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &-wrap {
+    height: 100%;
+    background: linear-gradient(to right,
+    rgba(255, 255, 255, .75) 0%,
+    rgba(255, 255, 255, .9) 25%,
+    rgba(255, 255, 255, .9) 75%,
+    rgba(255, 255, 255, .75) 100%);
+  }
+
+  &.firstSection {
+    height: 100vh;
+    background-image: url("../img/first.png");
+  }
+  .buttons{
+    padding-top: 70px;
+  }
+}
+
+.valign {
+  position: relative;
+  height: 100%;
+
+  &-container {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.company-name {
+  font-family: @regular-fontFamily;
+  color: @secondColor;
+  font-size: @companyName;
+  padding-top: 30px;
+}
+

@@ -1,0 +1,43 @@
+.container {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1170px;
+}
+
+.row:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.col {
+  float: left;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.grid(xs, 0);
+@media screen and (min-width: @phone-width) {
+  .grid(sm, @phone-cell-padding);
+}
+
+@media screen and (min-width: @tablet-width) {
+  .grid(md, @tablet-cell-padding);
+}
+
+@media screen and (min-width: @full-width) {
+  .grid(lg, @full-cell-padding);
+}
+
+// два ofset для теста
+@media screen and (min-width: @tablet-width) {
+  .offset-md-1 {
+    left: (1/@column-count)*100%;
+  }
+}
+
+@media screen and (min-width: @full-width) {
+  .offset-lg-2 {
+    left: (2/@column-count)*100%;
+  }
+}

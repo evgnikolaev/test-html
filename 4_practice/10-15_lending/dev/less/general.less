@@ -1,0 +1,104 @@
+@import "imports/_settings";
+@import "imports/_mixins";
+@import "imports/fonts";
+@import "imports/reset";
+@import "imports/grid";
+@import "imports/icons";
+
+body {
+  font-family: @regular-fontFamily;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.btn {
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
+  color: @whiteColor;
+  padding: 10px 20px;
+  font-size: @button-fontSize;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.2) 50%, transparent 50%);
+  background-size: 200%;
+  background-position: 100%;
+  transition: background-position 0.5s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-position: 0;
+  }
+
+  a& {
+    display: inline-block;
+  }
+
+  &-full {
+    box-sizing: border-box;
+    width: 100%;
+
+  }
+
+  &-default {
+    background-color: @secondColor;
+  }
+}
+
+
+.text {
+  &-center {
+    text-align: center;
+  }
+
+  &-left {
+    text-align: left;
+  }
+
+  &-right {
+    text-align: right;
+  }
+
+}
+
+
+.section {
+  padding: 29px 0;
+  &-blue {
+    background-color: @baseColor;
+    color: @whiteColor;
+  }
+
+  &-white {
+    background-color: @whiteColor;
+    color: @blackColor;
+  }
+}
+
+
+@import "imports/header";
+@import "imports/firstsection";
+@import "imports/filter";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
