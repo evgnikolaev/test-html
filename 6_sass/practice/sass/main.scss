@@ -1,0 +1,95 @@
+@import "_variables";
+@import "_mixins";
+
+
+//2 вложенность
+.header {
+  background: $color;
+
+  &.span {
+    @include font($color, bold, 20px 30px); //подключение миксина
+    background: $color;
+  }
+}
+
+//6 Математические операции
+@mixin grid($cols,$margin) {
+  float: left;
+  background: #cedeee;
+  margin-bottom: $margin;
+  height: 150px;
+
+
+  @if ($cols>=5) {
+    width: 100%;
+    margin-right: 0;
+  } @else {
+    width: ((100%-(($cols - 1)*$margin))/$cols);
+    margin-right: $margin;
+  }
+
+  &:nth-child(#{$cols}n) { //конкатенация
+    margin-right: 0;
+  }
+}
+
+
+#grid {
+  float: left;
+  width: (100%/3);
+  background: darken(#ddd, 50%);
+
+
+  > div {
+    @include grid(6, 2%);
+  }
+}
+
+
+$someVar: some_class;
+@for $i from 24 to 29 {
+  .#{$someVar}-#{$i} {
+    width: 50px+$i;
+    height: 50px+$i;
+  }
+}
+
+
+// @content
+@mixin reference_link($link,$hover) {
+  color: $link;
+  &:hover {
+    color: $hover
+  }
+  @content; // сюда можно расширять миксин для определенных блоков.
+}
+
+
+a.simple {
+  @include reference_link(red, blue)
+}
+
+a.complex {
+  @include reference_link(red, blue) {
+    background: #ccc;
+    &:visited {
+      color: green;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

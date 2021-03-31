@@ -3,11 +3,12 @@
 Видос
 https://www.youtube.com/watch?v=Jrjwewef_Ws&t=160s&ab_channel=%D0%9E%D1%820%D0%B4%D0%BE1
 
+https://www.youtube.com/watch?v=q1tdG7EIGa8&ab_channel=WebForMySelf  - практика
 
 
 ---------------
 
-Блок -  что это? не какой! (на задаем геомтрию блока, margin и позиционирование)
+Блок -  что это? не какой! (на задаем геомтрию блока, margin и позиционирование!!!) margin, position и float (дополнительно width, height и border)
 	    То есть мы можем спокойно выдирвать  блок и вставлять в другое место
 	    Можно вкладывать сколько угодно друг в друга
 

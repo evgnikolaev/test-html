@@ -1,0 +1,41 @@
+//3 Миксины (примеси)
+@mixin font($color,$fontW:bold,$padd...) {
+  display: block;
+  font-size: $mainFontSize;
+  font-weight: $fontW;
+  color: $color;
+  padding: $padd; //$padd... - для паддингов, т.к. здесь 1,2,3,4 варианта записи
+}
+
+// & - 1-ый вариант записи
+@mixin link($link,$hover,$visited) {
+  color: $link;
+  &:hover {
+    color: $hover
+  }
+  &:visited {
+    color: $visited
+  }
+}
+
+
+a {
+  @include link(red, blue, green);
+}
+
+// & - 2-ый вариант записи
+@mixin link2($link,$hover,$visited) {
+  a {
+    color: $link;
+
+    &:hover {
+      color: $hover
+    }
+
+    &:visited {
+      color: $visited
+    }
+  }
+}
+
+@include link2(#fff, #56fffc, #a0ff36);

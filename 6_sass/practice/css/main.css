@@ -1,0 +1,101 @@
+a {
+  color: red;
+}
+
+a:hover {
+  color: blue;
+}
+
+a:visited {
+  color: green;
+}
+
+a {
+  color: #fff;
+}
+
+a:hover {
+  color: #56fffc;
+}
+
+a:visited {
+  color: #a0ff36;
+}
+
+.header {
+  background: #ff0000;
+}
+
+.header.span {
+  display: block;
+  font-size: 1em;
+  font-weight: bold;
+  color: #ff0000;
+  padding: 20px 30px;
+  background: #ff0000;
+}
+
+#grid {
+  float: left;
+  width: 33.33333%;
+  background: #5e5e5e;
+}
+
+#grid > div {
+  float: left;
+  background: #cedeee;
+  margin-bottom: 2%;
+  height: 150px;
+  width: 100%;
+  margin-right: 0;
+}
+
+#grid > div:nth-child(6n) {
+  margin-right: 0;
+}
+
+.some_class-24 {
+  width: 74px;
+  height: 74px;
+}
+
+.some_class-25 {
+  width: 75px;
+  height: 75px;
+}
+
+.some_class-26 {
+  width: 76px;
+  height: 76px;
+}
+
+.some_class-27 {
+  width: 77px;
+  height: 77px;
+}
+
+.some_class-28 {
+  width: 78px;
+  height: 78px;
+}
+
+a.simple {
+  color: red;
+}
+
+a.simple:hover {
+  color: blue;
+}
+
+a.complex {
+  color: red;
+  background: #ccc;
+}
+
+a.complex:hover {
+  color: blue;
+}
+
+a.complex:visited {
+  color: green;
+}
