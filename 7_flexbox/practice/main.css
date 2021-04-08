@@ -1,0 +1,358 @@
+/*  reset css */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*  reset css end */
+
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	line-height: 1;
+	height: 100%;
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
+	max-width: 1180px;
+	margin: 0 auto;
+}
+
+.content {
+	flex: 1 1 auto;
+}
+
+
+.hi {
+	background-color: #445162;
+	padding: 50px 0;
+}
+
+.hi__row {
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.hi__body {
+	color: #fff;
+	padding-right: 30px;
+}
+
+.hi__title {
+	font-size: 60px;
+	margin-bottom: 40px;
+}
+
+.hi__list {
+	font-size: 20px;
+	line-height: 30px;
+
+}
+
+.hi__list li {
+	padding-left: 30px;
+	position: relative;
+}
+
+.hi__list li:before {
+	content: '\2713\0000a0\0000a0';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.hi__image {
+
+}
+
+
+.title {
+	font-size: 30px;
+	color: #445161;
+	line-height: 36px;
+}
+
+.what {
+	padding: 50px 0;
+}
+
+.what__row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.what__image {
+	flex: 0 0 440px;
+}
+
+.what__image img {
+	max-width: 100%;
+}
+
+.what__body {
+	flex: 1 1 auto;
+	padding-left: 35px;
+}
+
+.what__title {
+	margin-bottom: 35px;
+}
+
+.what__text {
+}
+
+.what__text p {
+	margin-bottom: 35px;
+	color: #333333;
+}
+
+
+.columns {
+	background-color: #f5f5f5;
+	padding: 50px 0 20px 0;
+}
+
+.columns__title {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.columns__row {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -8px;
+}
+
+.columns__column {
+	flex: 0 1 50%;
+	margin-bottom: 30px;
+	padding: 0 8px;
+}
+
+.columns__item {
+}
+
+.item {
+
+}
+
+.item__row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.item__image {
+	flex: 0 0 200px;
+}
+
+.item__body {
+	flex: 1 1 auto;
+	padding-left: 15px;
+}
+
+.item__title {
+	font-size: 24px;
+	color: #445161;
+	margin-bottom: 20px;
+}
+
+.item__text {
+	font-size: 16px;
+	color: #333333;
+	line-height: 24px;
+}
+
+
+.vertical {
+	padding: 50px 0;
+}
+
+.vetical__title {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.vertical__body {
+	width: 990px;
+	margin: 0 auto;
+}
+
+.vertical__row {
+	display: flex;
+	margin: 0 -22.5px;
+}
+
+.vertical__column {
+	flex: 0 1 33.333%;
+	padding: 0 22.5px;
+	display: flex;
+}
+
+.vertical__item {
+	border: 3px solid #445162;
+	border-radius: 5px;
+	background-color: #445162;
+	color: #fff;
+	padding-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.vertical__subtitle {
+	text-transform: uppercase;
+	text-align: center;
+	padding: 15px 0;
+}
+
+.vertical__label {
+	background-color: #fff;
+	color: #445162;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 20px 0;
+	font-size: 40px;
+}
+
+.vertical__text {
+	padding: 20px;
+	color: #fff;
+	line-height: 24px;
+	flex: 1 0 auto;
+}
+
+.vertical__text p {
+	margin-bottom: 20px;
+}
+
+.vertical__text p:last-child {
+	margin-bottom: 0;
+}
+
+.vertical__btn {
+	display: block;
+	margin: 0 20px;
+	background-color: #fff;
+	color: #445162;
+	line-height: 40px;
+	border-radius: 5px;
+	font-size: 18px;
+	text-align: center;
+}
+
+
+.footer {
+	background: #f5f5f5;
+}
+
+.footer_row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 65px;
+}
+
+.footer_text {
+	font-size: 12px;
+	letter-spacing: 0.3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

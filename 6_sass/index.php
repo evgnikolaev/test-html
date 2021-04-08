@@ -170,12 +170,17 @@
 
 
 
+	8. Шаблоны
+
+		%tplborder {
+		  border-bottom: 1px dashed #f00;
+		}
 
 
-
-
-
-
+		.link {
+		  text-decoration: none;
+		  @extend %tplborder;
+		}
 
 
 
