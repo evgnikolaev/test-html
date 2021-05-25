@@ -1,0 +1,23 @@
+.grid {
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	grid-template-rows: repeat(4,1fr);
+	grid-gap: 15px;
+	grid-auto-flow: row;
+}
+
+.grid-item{
+	background-color: #ccc;
+}
+
+.grid-item-2 {
+	grid-column: span 2;
+	order: 2;
+}
+.grid-item-3 {
+	grid-column: span 2;
+}
+.grid-item-4{
+	grid-row: span 2;
+}
+
