@@ -106,6 +106,32 @@ https://www.youtube.com/watch?v=GV92IdMGFfA&list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwL
         grid-auto-flow: row(горизонтальный по умолчанию) column(вертикальныый) dense(заполнить пустые области);
 		order: -1; (отрицательные цифры, 0 - по умолчанию , положительный цифры)
 
+
 	8) Вложенности
- 42минуты
+		Гриды можно вкладывать друг в друга.
+
+
+    9) Гибкость grid-эдементов при изменении размеров экрана
+
+        Автоматический перенос колонок при разных расширениях,
+        анализируется пустое пространство
+			grid-template-columns: repeat(auto-fill,minmax(300px, auto)); - ЗАПОЛНЯЕТ, строку максимально возможным числом колонок
+			grid-template-columns: repeat(auto-fit,minmax(300px, auto)); - ПОДСТРАИВАЕТ,растягивает дочерние элементы на всю ширину
+
+
+	10) grid-template-areas   и   grid-area   - управление позицией и порядком при помощи именований
+
+		 .container {
+				display: grid;
+				grid-template-columns: minmax(150px, 200px) 1fr minmax(150px, 200px);
+				grid-template-areas: "header header header"
+									 "main nav  aside"
+									 "footer footer footer";
+			}
+
+			header {grid-area: header;}
+			nav {grid-area: nav;}
+			aside {grid-area: aside;}
+			main {grid-area: main;}
+			footer {grid-area: footer;}
 
