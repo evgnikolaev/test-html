@@ -46,12 +46,64 @@ box-sizing : content-box - высота и ширина по content
 background
 Задаем когда это элемент дизайна (на загружаемая на контенте)
 
+
+background-color:   transparent;
+					#18b5a4;
+					rgb(24,181,164);        http://hex2rgba.devoth.com/
+                    rgba(24,181,164,0.5);
+
+
+background-image:   url('../img/avatar.jpg');
+					linear-gradient( ... );    https://www.colorzilla.com/gradient-editor/
+					radial-gradient( ... );
+
+
+background-repeat:  repeat;     - по умолчанию
+					no-repeat;
+					repeat-x;
+					repeat-y;
+					space;      -  заполняет полностью, и создает отступы между картинками - правктически не используются
+					round;      -  заполняет полностью,  растягивает, сужает картинки, чтобы влезли - правктически не используются
+
+
+background-position:    0 0;       - в пискселях
+						20px 30px; - в пискселях
+						0 50%;     - в процентах
+						center left bottom right ;     - словами
+
+
+background-attachment:   fixed; -  будет ли прокручиваться фоновое изображение относительно всей страницы (не блока)
+						 local - появляется скролл на самом блоке  - практически не используется
+
+
+
+background-size:  auto auto:  - маштабирует фоновое изображение согласно заданным размерам
+				  100% auto;  - по ширине (растянуть)
+				  auto 100%;  - по высоте (растянуть)
+				  100% 100%;  - растянуть непропорционально
+				  300px 100%;  - растянуть непропорционально
+				  contain;      - маштабирует с сохранением пропорций, чтобы картинка целиком поместилась в блок (маштабирует по меньшей стороне)
+				  cover;        - маштабирует с сохранением пропорций, чтобы его ширина и высота равнялась ширине и высоте блока (маштабирует по большей стороне)
+
+
+Установка нескольких фоновых изображений через запятую, и каждая послеюующая ложится под предыдущую.
+
+background: background-image
+			background-position  "/" background-size
+			background-repeat
+			background-attachment
+
+
+background: url('img/background/bg.jpg') 0 0/auto auto no-repeat;
+
+
+
+
 !!!  Последовательность должна быть такой background-image, background-color (потому что пока картинка не загрузилась, будет показываться цвет).
 
 background-clip : border-box - картика может залезать на border
 				  padding-box - картинка может залезать на padding
 				  content-box  - картинка только в облости content
-
 
 
 -----------------------------------   4) Каскад и специфичность   --------------------------------------------
