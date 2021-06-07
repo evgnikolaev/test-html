@@ -6,25 +6,9 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 }
 
-/* Background 11 минут
-
-https://www.youtube.com/watch?v=8sHgyURhAkM&list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwLFIr&index=9&ab_channel=%D0%A4%D1%80%D0%B8%D0%BB%D0%B0%D0%BD%D1%81%D0%B5%D1%80%D0%BF%D0%BE%D0%B6%D0%B8%D0%B7%D0%BD%D0%B8-IT%D0%B8%D1%84%D1%80%D0%B8%D0%BB%D0%B0%D0%BD%D1%81%D0%A4%D1%80%D0%B8%D0%BB%D0%B0%D0%BD%D1%81%D0%B5%D1%80%D0%BF%D0%BE%D0%B6%D0%B8%D0%B7%D0%BD%D0%B8-IT%D0%B8%D1%84%D1%80%D0%B8%D0%BB%D0%B0%D0%BD%D1%81%D0%9F%D0%BE%D0%B4%D1%82%D0%B2%D0%B5%D1%80%D0%B6%D0%B4%D0%B5%D0%BD%D0%BE
-
-*/
-.block {
-	height: 300px;
-	border-radius: 15px;
-	box-shadow: 0 0 10px #000;
-	background-image: url(../images/21.jpg);
-}
-
-
 body {
-	padding: 30px;
 	margin: 0;
-	/*font-family: 'Kaushan Script', cursive;*/
 	font-family: 'Montserrat', sans-serif;
-	/*font-family: 'Roboto', sans-serif;*/
 	font-size: 15px;
 	color: #333;
 	line-height: 1.6;
@@ -44,7 +28,360 @@ body {
 	height: 100vh;
 	background: url(../images/hero.png) center no-repeat;
 	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
+
+.intro__inner {
+	width: 880px;
+	margin: 0 auto;
+	color: #fff;
+	text-align: center;
+}
+
+.intro__suptitle {
+	font-family: 'Kaushan Script', cursive;
+	font-size: 40px;
+	margin-bottom: 20px;
+}
+
+.intro__title {
+	font-weight: bold;
+	font-size: 60px;
+	line-height: 1;
+	margin-bottom: 50px;
+}
+
+.intro__title:after {
+	content: '';
+	display: block;
+	height: 3px;
+	width: 60px;
+	background: #fff;
+	margin: 60px auto 0;
+}
+
+.intro__slider {
+	width: 100%;
+
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+}
+
+/* Header */
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	width: 100%;
+	color: #fff;
+	padding-top: 30px;
+}
+
+.header__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__logo {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+
+/* Nav */
+.nav {
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+.nav__link {
+	display: inline-block;
+	color: #fff;
+	text-decoration: none;
+	transition: color .1s linear;
+	vertical-align: top;
+	margin: 0 10px;
+	position: relative;
+}
+
+.nav__link:after {
+	content: '';
+	display: block;
+	width: 100%;
+	position: absolute;
+	height: 3px;
+	background-color: transparent;
+	transition: background-color .1s linear;
+	top: 110%;
+	left: 0;
+}
+
+.nav__link:hover, .nav__link--active {
+	color: #fce38a;
+}
+
+.nav__link:hover:after, .nav__link--active:after {
+	background-color: #fce38a;
+}
+
+/* Buttons */
+.btn {
+	display: inline-block;
+	vert-align: top;
+	padding: 10px 30px;
+
+	font-weight: bold;
+	font-size: 14px;
+	color: #fff;
+	text-transform: uppercase;
+	border: 3px solid #fff;
+	text-decoration: none;
+	transition: background-color .3s linear, color .3s linear;
+}
+
+.btn:hover {
+	background: #fff;
+	color: #333333;
+}
+
+/* Slider */
+.slider__inner {
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+}
+
+.slider__item {
+	position: relative;
+	flex-basis: 24%;
+	padding: 20px 0;
+
+	border-top: 3px solid #fff;
+
+	font-size: 18px;
+	text-transform: uppercase;
+	opacity: 0.7;
+}
+
+.slider__item--active {
+	opacity: 1;
+}
+
+.slider__item--active:before {
+	content: '';
+	display: block;
+	height: 3px;
+	width: 70px;
+
+	background: #f38181;
+
+	position: absolute;
+	top: -3px;
+	left: 0;
+	z-index: 1;
+
+}
+
+.slider__num {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+/* Section */
+.section {
+	padding: 80px 0;
+}
+
+.section--devices {
+	background: url(../images/devices-bg.jpg) center center no-repeat;
+	background-size: cover;
+	padding-bottom: 0;
+}
+
+.section__header {
+	width: 1000px;
+	margin: 0 auto 90px;
+	text-align: center;
+}
+
+.section__suptitle {
+	font-family: 'Kaushan Script', cursive;
+	font-size: 24px;
+}
+
+.section__title {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.section__title:after {
+	content: '';
+	display: block;
+	width: 60px;
+	height: 3px;
+	background-color: #f38181;
+	margin: 30px auto;
+}
+
+.section__text {
+	font-family: 'Roboto', sans-serif;
+	color: #999999;
+}
+
+/* About */
+.about {
+	display: flex;
+	margin: 0 -15px;
+	margin-bottom: 80px;
+
+}
+
+.about__item {
+	flex: 0 0 33.33%;
+	padding: 0 15px;
+}
+
+.about__item:hover .about__img {
+	transform: translate(-10px, -10px);
+}
+
+.about__item:hover .about__text {
+	opacity: 1;
+}
+
+.about__item:hover .about__img img {
+	opacity: 0.1;
+}
+
+.about__itembg {
+	background: #95e1d3;
+	position: relative;
+}
+
+.about__img {
+	background: linear-gradient(to bottom, #fbe389, #f38181);
+	transition: transform .2s linear;
+}
+
+.about__img img {
+	display: block;
+	transition: opacity .1s linear;
+}
+
+.about__text {
+	width: 100%;
+	font-size: 18px;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	opacity: 0;
+
+	position: absolute;
+	top: 50%;
+	left: 0;
+	z-index: 2;
+	transform: translate3d(0px, -50%, 0px);
+	transition: opacity 0.2s linear;
+}
+
+/* Statistics */
+.statistics {
+	background: #95e1d3;
+}
+
+.stat {
+	display: flex;
+}
+
+.stat__item {
+	flex: 1 1 0; /*! равномерное количество карточек*/
+	padding: 80px 30px;
+
+	border-left: 1px solid #b5eae0;
+	color: #fff;
+	text-align: center;
+}
+
+.stat__item:last-child {
+	border-right: 1px solid #b5eae0;
+}
+
+.stat__count {
+	font-size: 72px;
+	font-weight: bold;
+	line-height: 1;
+}
+
+.stat__text {
+	font-size: 14px;
+}
+
+/* Services */
+.services {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.services__item {
+	flex: 0 0 33.33%;
+	position: relative;
+	padding-left: 85px;
+	padding-right: 20px;
+	margin-bottom: 80px;
+}
+
+.services__icon {
+	position: absolute;
+	top: 0;
+	left: 25px;
+	z-index: 1;
+}
+
+.services__title {
+	font-size: 14px;
+	text-transform: uppercase;
+	margin-bottom: 15px;
+}
+
+.services__text {
+	font-size: 11px;
+	color: #999;
+}
+
+/* Devices */
+.devices {
+	max-width: 600px;
+	width: 100%;
+	margin: 0px auto;
+	position: relative;
+}
+
+.device__item--iphone {
+	position: absolute;
+	bottom: -80px;
+	right: 0px;
+	z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
