@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.container {
+			max-width: 1400px;
+			width: 100%;
+			margin: 0 auto;
+		}
+
+		.cards {
+			margin: 0 0 70px 0;
+		}
+
+		.cards__row {
+			margin: 0 -15px 0 -15px;
+			display: flex;
+		}
+
+		.cards__column {
+			flex: 0 1 33.333%;
+			padding: 0 15px;
+		}
+
+		.cards__image {
+			margin: 0 0 20px 0;
+
+		}
+	</style>
+</head>
+<body>
+
+
+<!--
+
+https://www.youtube.com/watch?v=nTtuiBXKp88&list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwLFIr&index=25&ab_channel=%D0%A4%D1%80%D0%B8%D0%BB%D0%B0%D0%BD%D1%81%D0%B5%D1%80%D0%BF%D0%BE%D0%B6%D0%B8%D0%B7%D0%BD%D0%B8-IT%D0%B8%D1%84%D1%80%D0%B8%D0%BB%D0%B0%D0%BD%D1%81
+
+
+	Картинки по умолчанию не адаптируются!
+
+		1)  max-width : 100% - хорош для контентных областей
+		2)	можно картинки задать через background, контентые картинки через backround делать не удобно
+		3)  object-fit, маштабирует картинку подобно тому, как это делает bacground-size
+			но, object-fit не поддерживается IE11, для него етсь лечение - https://fls.guru/ibg.html
+
+			Задаем высоту и ширину картинку, и при помощи object-fit вставляем картинку
+			object-fit: fill; 	      - залить, растянуть полностью
+						contain;      - маштабирует с сохранением пропорций, чтобы картинка целиком поместилась в блок (маштабирует по меньшей стороне)
+						cover;        - маштабирует с сохранением пропорций, чтобы его ширина и высота равнялась ширине и высоте блока (маштабирует по большей стороне)
+						none;         - впишется в весь блок, но маштабироваться не будет
+
+			Позицию можно задавать при помощи object-position.
+
+-->
+
+<h2> max-width : 100% </h2>
+<style>
+
+	.block__img img {
+		max-width: 100%;
+	}
+
+</style>
+<div class="container">
+	<div class="block">
+		<div class="block__img">
+			<img src="http://placehold.it/1300x200" alt="">
+		</div>
+		<div class="block__content">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab consequatur consequuntur culpa cum dolor enim inventore iste maiores nam, nemo, nostrum omnis porro tenetur? At, id, minus! Amet autem, optio!</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab consequatur consequuntur culpa cum dolor enim inventore iste maiores nam, nemo, nostrum omnis porro tenetur? At, id, minus! Amet autem, optio!</p>
+		</div>
+		<div class="block__img">
+			<img src="http://placehold.it/800x200" alt="">
+		</div>
+	</div>
+</div>
+
+
+<h2> object-fit </h2>
+<style>
+	.cards__image {
+		/*height: 200px;*/
+		padding-bottom: 58%; /* - для отзывчивой высоты, пример2 */
+		position: relative;
+	}
+
+	.cards__image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+
+		position: absolute; /* - для отзывчивой высоты, пример2 */
+		top: 0;
+		left: 0;
+	}
+</style>
+<div class="container">
+	<div class="cards">
+		<div class="cards__row">
+			<div class="cards__column">
+				<div class="cards__image">
+					<img src="http://placehold.it/800x400" alt="">
+				</div>
+				<div class="cards__text">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam assumenda blanditiis ducimus exercitationem, facere facilis fuga ipsa iure maxime nobis nulla praesentium quaerat quidem quod rem sequi vel vitae voluptatem!
+				</div>
+			</div>
+			<div class="cards__column">
+				<div class="cards__image">
+					<img src="http://placehold.it/400x600" alt="">
+				</div>
+				<div class="cards__text">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam assumenda blanditiis ducimus exercitationem, facere facilis fuga ipsa iure maxime nobis nulla praesentium quaerat quidem quod rem sequi vel vitae voluptatem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam assumenda blanditiis ducimus exercitationem, facere facilis fuga ipsa iure maxime nobis nulla praesentium quaerat quidem quod rem sequi vel vitae voluptatem!
+				</div>
+			</div>
+			<div class="cards__column">
+				<div class="cards__image">
+					<img src="http://placehold.it/1300x200" alt="">
+				</div>
+				<div class="cards__text">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam assumenda blanditiis ducimus exercitationem, facere facilis fuga ipsa iure maxime nobis nulla praesentium quaerat quidem quod rem sequi vel vitae voluptatem!
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<h2> object-fit (картинки в ряд) </h2>
+<div class="container">
+
+</div>
+
+
+</body>
+</html>
