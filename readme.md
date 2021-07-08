@@ -60,3 +60,10 @@
 <br/><br/>
 
 
+```
+9) Практика Дмитриий Валак
+```
+
+[практика](https://files.brainscloud.ru/files/adaptivnaya-verstka-sajta-s-nulya-dlya-nachinayushchih-mogo)
+
+<br/><br/>

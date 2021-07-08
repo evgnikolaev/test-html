@@ -39,6 +39,7 @@ https://caniuse.com/ - можно задать свойство и посмот�
 			<use xlink:href="#facebook"></use>
 		</svg>
 
+ - https://realfavicongenerator.net/   - генератор favicon
 
 
 

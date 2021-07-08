@@ -2,7 +2,10 @@ $(function () {
 
 	let introH = $('.intro').innerHeight(),
 		scrollTop = $(this).scrollTop(),
-		header = $('#header');
+		header = $('#header'),
+		nav = $('#nav'),
+		navToggle = $('#navToggle');
+
 
 	function scrollTo(scrollTop, introH) {
 		if (scrollTop > introH) {
@@ -25,7 +28,7 @@ $(function () {
 		blockOffset = $(blockId).offset().top;
 
 		$('html, body').animate({
-			scrollTop: blockOffset-52
+			scrollTop: blockOffset - 52
 		}, {
 			duration: 700
 		});
@@ -33,13 +36,19 @@ $(function () {
 	});
 
 
-	let nav = $('#nav'),
-		navToggle = $('#navToggle');
-
 	navToggle.on('click', function (e) {
 		e.preventDefault();
 		nav.toggleClass('show');
 	});
 
+
+	$('#reviewsSlider').slick({
+		infinite: true,
+		// fade:true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows:false,
+		dots:true
+	});
 
 });

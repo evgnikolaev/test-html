@@ -4,12 +4,26 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
+
+	<meta name="description" content="ActiveBox"/>
+	<meta name="google" content="notranslate"/>  <!--не предлагать перевод страницы-->
+	<title>ActiveBox</title>
+
+	<!--	favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+<!--	<link rel="manifest" href="img/favicons/site.webmanifest">-->
+	<link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Open+Sans:wght@700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -303,16 +317,35 @@
 
 
 <div class="reviews" id="reviews">
-	<div class="container">
-		<div class="reviews__item">
-			<div class="reviews__photo">
-				<img class="reviews__img" src="img/reviews1.jpg" alt="">
+	<div class="container container__slider">
+
+		<div class="reviews__slider" id="reviewsSlider">
+			<div>
+				<div class="reviews__item">
+					<div class="reviews__photo">
+						<img class="reviews__img" src="img/reviews1.jpg" alt="">
+					</div>
+					<div class="reviews__content">
+						<div class="reviews__text">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</div>
+						<div class="reviews__author">Susan Sims, Interaction Designer at XYZ</div>
+					</div>
+				</div>
 			</div>
-			<div class="reviews__content">
-				<div class="reviews__text">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</div>
-				<div class="reviews__author">Susan Sims, Interaction Designer at XYZ</div>
+
+			<div>
+				<div class="reviews__item">
+					<div class="reviews__photo">
+						<img class="reviews__img" src="img/reviews1.jpg" alt="">
+					</div>
+					<div class="reviews__content">
+						<div class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit</div>
+						<div class="reviews__author">Minus molestiae nihil odit optio perspiciatis quas quia similique sint voluptatem.</div>
+					</div>
+				</div>
 			</div>
+
 		</div>
+
 	</div>
 </div>
 
@@ -381,6 +414,7 @@
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="app.js"></script>
 
 </body>
