@@ -30,6 +30,22 @@
 			margin: 0 0 20px 0;
 
 		}
+
+
+		.items__item {
+			display: flex;
+			margin-bottom: 30px;
+		}
+
+		.items__image {
+			flex: 0 0 500px;
+		}
+
+		.items__body {
+			flex: 1 1 auto;
+			padding-left: 30px;
+		}
+
 	</style>
 </head>
 <body>
@@ -55,9 +71,10 @@ https://www.youtube.com/watch?v=nTtuiBXKp88&list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwL
 
 			Позицию можно задавать при помощи object-position.
 
+		4) Для отображения под разными расширениями монитора используется тег picture
 -->
 
-<h2> max-width : 100% </h2>
+<h2>1) max-width : 100% </h2>
 <style>
 
 	.block__img img {
@@ -81,7 +98,7 @@ https://www.youtube.com/watch?v=nTtuiBXKp88&list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwL
 </div>
 
 
-<h2> object-fit </h2>
+<h2>3) object-fit </h2>
 <style>
 	.cards__image {
 		/*height: 200px;*/
@@ -132,9 +149,74 @@ https://www.youtube.com/watch?v=nTtuiBXKp88&list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwL
 </div>
 
 
-<h2> object-fit (картинки в ряд) </h2>
-<div class="container">
+<h2>3) object-fit (картинки в ряд) </h2>
 
+<style>
+	.items__image {
+		flex: 0 0 33%;
+		min-height: 20px;
+		position: relative;
+	}
+
+	.items__image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+</style>
+<div class="container">
+	<div class="items">
+		<div class="items__row">
+			<div class="items__item">
+				<div class="items__image">
+					<img src="http://placehold.it/1300x400" alt="">
+				</div>
+				<div class="items__body">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam asperiores atque consectetur consequatur cupiditate, dolore dolorem, ipsum minima modi nesciunt nulla sed tempore voluptates voluptatibus! Beatae deleniti doloremque quas?
+				</div>
+			</div>
+			<div class="items__item">
+				<div class="items__image">
+					<img src="http://placehold.it/400x600" alt="">
+				</div>
+				<div class="items__body">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam asperiores atque consectetur consequatur cupiditate, dolore dolorem, ipsum minima modi nesciunt nulla sed tempore voluptates voluptatibus! Beatae deleniti doloremque quas?
+
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam asperiores atque consectetur consequatur cupiditate, dolore dolorem, ipsum minima modi nesciunt nulla sed tempore voluptates voluptatibus! Beatae deleniti doloremque quas?
+				</div>
+			</div>
+			<div class="items__item">
+				<div class="items__image">
+					<img src="http://placehold.it/800x400" alt="">
+				</div>
+				<div class="items__body">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam asperiores atque consectetur consequatur cupiditate, dolore dolorem, ipsum minima modi nesciunt nulla sed tempore voluptates voluptatibus! Beatae deleniti doloremque quas?
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<h2>4) Тег picture </h2>
+<style>
+	picture img{
+		width: 300px;
+		height: 300px;
+		object-fit: cover;
+	}
+</style>
+<div class="container">
+	<picture>
+		<source srcset="http://placehold.it/1300x400" type="image/jpeg" media="(min-width: 1300px)">
+		<source srcset="http://placehold.it/800x400" type="image/jpeg" media="(min-width: 992px)">
+		<source srcset="http://placehold.it/400x600" type="image/jpeg" media="(max-width: 992px)">
+		<img src="http://placehold.it/1300x400" alt="MDN">
+	</picture>
 </div>
 
 
