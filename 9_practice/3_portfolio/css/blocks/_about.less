@@ -1,0 +1,60 @@
+.about {
+  margin: 7rem 0;
+
+  &__inner {
+    display: flex;
+    width: 90%;
+  }
+
+  &__photo {
+    width: 50%;
+    position: relative;
+
+    img {
+      z-index: 2;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      width: 413px;
+      height: 413px;
+      background: #ccc;
+
+      position: absolute;
+      left: 1rem;
+      bottom: 0;
+      z-index: -1;
+    }
+  }
+
+  &__content {
+    margin-top: 2rem;
+    padding-left: 3.2rem;
+    width: 50%;
+  }
+
+  &__title {
+    margin-bottom: 1.4rem;
+
+    font-size: 3rem;
+    font-weight: 700;
+    color: @black;
+  }
+
+  &__bigtitle {
+    margin-bottom: 2.8rem;
+    line-height: 1;
+    font-size: 5.5rem;
+    font-weight: 700;
+    color: #dedede;
+  }
+
+  &__text {
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: #dedede;
+    line-height: 1.7rem;
+    margin-bottom: 2.8rem;
+  }
+}

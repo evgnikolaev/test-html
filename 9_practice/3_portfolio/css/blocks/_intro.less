@@ -1,0 +1,46 @@
+.intro {
+  &__inner {
+    display: flex;
+    position: relative;
+    padding: 6.66rem 0 8rem;
+
+    background: url(../images/symbols.png) right bottom no-repeat;
+    border-bottom: 1px solid fade(@black, 10%);
+  }
+
+  &__content {
+    width: 50%;
+  }
+
+  &__photo {
+    position: absolute;
+    right: 75px;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  &__subtitle {
+    font-size: 2.1rem;
+    color: @black;
+    font-weight: 300;
+  }
+
+  &__title {
+    margin-bottom: 0.9rem;
+
+    font-size: 3rem;
+    color: @black;
+    font-weight: 700;
+  }
+
+  &__text {
+    margin-bottom: 1.3rem;
+
+    font-size: 1.2rem;
+    color: @gray;
+  }
+
+  &__social {
+    margin-bottom: 40px;
+  }
+}
