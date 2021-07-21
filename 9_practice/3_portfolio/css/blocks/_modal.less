@@ -1,0 +1,81 @@
+.modal {
+  display: none;
+  width: 100%;
+  height: 100%;
+  padding: 0 1rem;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(15, 22, 105, 0.6);
+
+  &.show {
+    display: flex;
+  }
+
+
+  &__dialog {
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    transform: rotateX(90deg);
+    transition: transform 0.2s linear;
+
+    background-color: #fff;
+  }
+
+  // Modificator
+  &__dialog--sm {
+    max-width: 900px;
+  }
+
+  &__close {
+    width: 34px;
+    height: 34px;
+
+    position: absolute;
+    top: 0.9rem;
+    right: 0.9rem;
+    z-index: 1;
+
+    cursor: pointer;
+    background: none;
+    padding: 0;
+    border: 0;
+    outline: none;
+    transition: transform .2s linear;
+
+    &:hover {
+      transform: translate(0, -7px);
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__content {
+    padding: 5rem 1rem;
+  }
+
+  &__title {
+    margin-bottom: 3.6rem;
+
+    font-size: 3rem;
+    color: @black;
+    font-weight: 700;
+  }
+
+  &__subtitle {
+    font-size: 1.06rem;
+    color: @black;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+
+}
+

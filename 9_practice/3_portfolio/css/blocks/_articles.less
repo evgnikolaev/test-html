@@ -1,0 +1,77 @@
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+
+  &__col {
+    width: 33.33%;
+    padding: 15px;
+  }
+
+  &__header {
+    position: relative;
+    margin-bottom: 1.35rem;
+  }
+
+  &__date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 77px;
+    height: 77px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    text-align: center;
+    background: @black;
+    color: @white;
+  }
+
+  &__photo {
+
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__content {
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    margin-bottom: 0.6rem;
+
+    font-size: 1.2rem;
+    color: @black;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__cat {
+    margin-bottom: 1.5rem;
+
+    font-size: 0.8rem;
+    color: @black;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-size: 0.7rem;
+    color: @gray;
+    line-height: 1.8;
+  }
+
+
+}
