@@ -12,6 +12,13 @@
   &__credits {
     display: flex;
     align-items: center;
+
+    @media @tablet {
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
   }
 
   &__copyright {
@@ -24,6 +31,16 @@
   &__nav {
     display: flex;
     align-items: center;
+
+    @media @tablet {
+      width: 100%;
+      justify-content: center;
+    }
+
+
+    @media @mobile-sm {
+      flex-wrap: wrap;
+    }
   }
 
   &__link {
@@ -33,6 +50,10 @@
 
     &:not(.footer__link--btn):hover {
       text-decoration: underline;
+    }
+
+    @media @mobile-sm {
+      margin-bottom: 0.5rem;
     }
   }
 
@@ -51,13 +72,13 @@
   &__social {
     display: flex;
     align-items: center;
-    a{
+
+    a {
       margin-right: 6px;
       width: 18px;
       height: 18px;
     }
   }
-
 
 
 }

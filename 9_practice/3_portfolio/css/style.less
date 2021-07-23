@@ -1,6 +1,35 @@
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: @black;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@import "vendor/slick";
+
 @import "blocks/_vars";
 @import "blocks/_header";
 @import "blocks/_nav";
+@import "blocks/_burger";
 @import "blocks/_intro";
 @import "blocks/_social";
 @import "blocks/_btn";
@@ -19,29 +48,6 @@
 @import "blocks/_contact";
 @import "blocks/_form";
 @import "blocks/_helpers";
+@import "blocks/_for_slick_slider";
 
-html {
-  font-size: 15px;
-}
 
-body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
-  color: @black;
-}
-
-.no-scroll {
-  overflow: hidden;
-}
-
-*, *:after, *:before {
-  box-sizing: border-box;
-}
-
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}

@@ -2,6 +2,23 @@
   display: flex;
   align-items: center;
 
+  @media @mobile {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: auto;
+    width: 100%;
+    z-index: 1000;
+    background: @white;
+    box-shadow: 0 5px 10px rgba(@black, 0.7);
+
+    &.show {
+      display: block;
+    }
+  }
+
   &__link {
     margin-left: 2rem;
     position: relative;
@@ -11,6 +28,12 @@
     text-transform: uppercase;
     text-decoration: none;
     font-weight: 700;
+
+    @media @mobile {
+      display: block;
+      text-align: center;
+      margin: 0.7rem 0;
+    }
 
     &:not(.nav__link--btn):after {
       content: '';

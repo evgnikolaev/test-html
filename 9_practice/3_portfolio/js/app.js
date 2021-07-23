@@ -79,6 +79,33 @@ $(function () {
 	});
 
 
+	// slider https://kenwheeler.github.io/slick/
+	$('#worksSlider').slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		dots: true
+	});
+
+
+	$('.slickPrev').on('click', function (e) {
+		e.preventDefault();
+		$('#worksSlider').slick('slickPrev');
+	});
+
+	$('.slickNext').on('click', function (e) {
+		e.preventDefault();
+		$('#worksSlider').slick('slickNext');
+	});
+
+
+	$('#navToggle').on('click', function (e) {
+		e.preventDefault();
+		$('#nav').toggleClass('show');
+	});
+
 });
 
 

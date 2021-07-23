@@ -1,0 +1,56 @@
+#worksSlider {
+  &.slick-slider {
+    height: 100%;
+  }
+
+  .slick-list {
+    height: 100%;
+  }
+
+  .slick-track {
+    height: 100%;
+  }
+
+  .slick-slide {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    li {
+      margin: 0 0.5rem;
+      background: transparent;
+
+      &.slick-active button{
+        background: @white;
+      }
+    }
+
+    button {
+      padding: 0;
+      margin: 0;
+
+      font-size: 0;
+      color: transparent;
+      outline: 0;
+      background: none;
+
+      width: 10px;
+      height: 10px;
+      background: @gray-light;
+      border: 1px solid @gray-light;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+}
+
