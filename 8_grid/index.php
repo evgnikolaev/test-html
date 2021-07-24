@@ -14,7 +14,8 @@ https://www.youtube.com/watch?v=GV92IdMGFfA&list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwL
 
 	1) display: grid;  - для контейнера включаем гриды.
 
-	2) grid-template-columns и grid-column-gap
+	2) grid-template-columns (grid-template-rows) и
+       grid-column-gap (grid-row-gap)
 
 			grid-template-columns: 100px 1fr 200px; - количество колонок
 		        ( grid-template-rows:  1fr 300px;         - количество строк )
@@ -66,9 +67,12 @@ https://www.youtube.com/watch?v=GV92IdMGFfA&list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwL
 		grid-column:col1/col2;  - с какой линии до какой
 		grid-column:col1/span 3; - с какой линии, сколько ширин столбцов взять
 
+        или
+        grid-template-columns: repeat(12,[col] 1fr);
+		grid-column: col 1/col 4;
 
 
-	5) Выравнивание контента
+	5) Выравнивание контента внутри элемента
 
         для всех элементов контейнера (задаем там, где display:grid)
             align-items:   stretch (по умолчанию) start end center;  по Y
@@ -82,8 +86,8 @@ https://www.youtube.com/watch?v=GV92IdMGFfA&list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwL
 
 	6) Выравнивание сетки(grid-элементов) внутри контейнера
 
-          Выравнивают сетку внутри контейнера только тогда, когда заданы абсолютные значения:
-          и высота и ширина имеют внутри промежутки:
+          Выравнивают сетку внутри контейнера только тогда, когда заданы абсолютные значения,
+          и высота и ширина например в пикселях:
 				 .grid {
 					height: 400px;  !!
 					width: 800px;
@@ -111,12 +115,12 @@ https://www.youtube.com/watch?v=GV92IdMGFfA&list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwL
 		Гриды можно вкладывать друг в друга.
 
 
-    9) Гибкость grid-эдементов при изменении размеров экрана
+    9) Гибкость grid-элементов при изменении размеров экрана (для адаптивов)
 
         Автоматический перенос колонок при разных расширениях,
         анализируется пустое пространство
 			grid-template-columns: repeat(auto-fill,minmax(300px, auto)); - ЗАПОЛНЯЕТ, строку максимально возможным числом колонок
-			grid-template-columns: repeat(auto-fit,minmax(300px, auto)); - ПОДСТРАИВАЕТ,растягивает дочерние элементы на всю ширину
+			grid-template-columns: repeat(auto-fit,minmax(300px, auto)); - ПОДСТРАИВАЕТ,растягивает дочерние элементы на всю ширину (когда колонок мало)
 
 
 	10) grid-template-areas   и   grid-area   - управление позицией и порядком при помощи именований
