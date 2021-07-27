@@ -36,6 +36,12 @@ https://www.youtube.com/watch?v=GV92IdMGFfA&list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwL
 		    grid-template-columns: repeat(4, 1fr);
 		        Повторяем колонки одинаковой ширины.
 
+
+            grid-template = grid-template-rows / grid-template-columns
+            Также есть явная сетка и нефвная сетка (когда элемент выходит за сетку). Для неявной сетки есть свои свойства: grid-auto-rows (grid-auto-columns)
+			Также лучше процентные значения для padding и margin лучше не указывать, т.к. браузеры по разному считают эти проценты.
+
+
 		 Если для какой то колонки не задать ширину, по умолчанию auto.
 
             grid-gap:
