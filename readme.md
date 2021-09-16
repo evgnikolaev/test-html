@@ -20,6 +20,8 @@
 ```
 3) Doctype gulp (3_gulp)
 ```
+
+
 [gulp_for_small](https://www.youtube.com/watch?v=vW51JUVT66w&ab_channel=WebDesignMaster)
 (Gulp для маленьких)
 
@@ -59,6 +61,14 @@
 
 <br/><br/>
 
+```
+8) Гриды
+```
+[теория](https://www.youtube.com/watch?v=yTLqfUxwdDk&ab_channel=webDev)
+
+[практика](https://www.youtube.com/watch?v=GV92IdMGFfA&list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwLFIr&index=29&ab_channel=%D0%A4%D1%80%D0%B8%D0%BB%D0%B0%D0%BD%D1%81%D0%B5%D1%80%D0%BF%D0%BE%D0%B6%D0%B8%D0%B7%D0%BD%D0%B8-IT%D0%B8%D1%84%D1%80%D0%B8%D0%BB%D0%B0%D0%BD%D1%81)
+
+<br/><br/>
 
 ```
 9) Практика Дмитриий Валак
