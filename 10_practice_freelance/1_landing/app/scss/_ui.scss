@@ -1,0 +1,19 @@
+.title {
+  &__item {
+    font-family: "ceremonious_one";
+    color: #bb9c66;
+    font-size: 40px;
+    margin-bottom: 23px;
+  }
+
+  &__main {
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    &-w {
+      color: #fff;
+    }
+  }
+
+}
