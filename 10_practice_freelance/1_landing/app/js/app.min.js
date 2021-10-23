@@ -30,10 +30,10 @@ if (iconMenu != null) {
 }
 
 //main_slider
-const main_slider = new Swiper('.swiper', {
+const main_slider = new Swiper('.swiper-main-slider', {
 	observe: true,
 	observeParents: true,
-	slidesToShow: 1,
+	slidesPerView: 1,
 	spaceBetween: 0,
 	speed: 800,
 	loop: true,
@@ -55,7 +55,33 @@ const main_slider = new Swiper('.swiper', {
 	}
 });
 
+//slider-lots
+const slider_lots = new Swiper('.swiper-lots', {
+	observe: true,
+	observeParents: true,
+	slidesPerView: 3,
+	// slidesToShow: 2,
+	spaceBetween: 0,
+	speed: 800,
+	loop: true,
 
+	navigation: {
+		nextEl: '.lots__control-arrow_next',
+		prevEl: '.lots__control-arrow_prev',
+	},
+
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+		},
+		600: {
+			slidesPerView: 2,
+		},
+		800: {
+			slidesPerView: 3,
+		}
+	}
+});
 
 
 
