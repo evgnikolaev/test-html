@@ -1,0 +1,203 @@
+.header {
+  background: #1c242a;
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 99;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    height: 75px;
+  }
+
+  &__logo {
+    @media (max-width: $mw3 + px) {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 144px;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+  }
+
+  &__menu {
+    flex: 1 1 auto;
+    padding: 0 0 0 30px/950px * 100%;
+  }
+}
+
+//header__menu
+.menu {
+
+  &__icon {
+    //burger
+  }
+
+  &__body {
+    @media (max-width: $mw3 + px) {
+      opacity: 0;
+      visibility: hidden;
+      background: rgb(28, 36, 42);
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      padding: 90px 0 20px 0;
+      overflow: auto;
+
+      &:after {
+        background: #1c242a;
+        content: '';
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 75px;
+        z-index: 1;
+      }
+    }
+
+    &._active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    @media (max-width: $mw3 + px) {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &__link {
+    font-family: "pfdin-regular";
+    padding: 0 0 0 30px;
+    letter-spacing: 1.4px;
+    @media (max-width: $mw3 + px) {
+      padding: 0 0 0 0px;
+      margin: 0 0 30px 0;
+      font-size: 20px;
+    }
+  }
+
+  &__link-a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// header__actions
+.actions-header {
+  display: flex;
+  position: relative;
+  height: 100%;
+  align-items: center;
+
+  &__region {
+    @extend .menu__link-a;
+    display: block;
+    min-width: 18px;
+    min-height: 18px;
+    background: url("../img/glob.png") 0 0 no-repeat;
+    padding: 0 0 0 25px;
+    line-height: 19px;
+
+    @media (max-width: 890px) {
+      span {
+        display: none;
+      }
+    }
+  }
+
+  &__user {
+    margin: 0 0 0 23px;
+    @media (max-width: 890px) {
+      margin: 0 0 0 15px;
+    }
+  }
+}
+
+.user-header {
+  &__icon {
+    cursor: pointer;
+  }
+
+  &__menu {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin: 3px 0 0 0;
+    background: #1c242a;
+    width: 175px;
+    padding: 10px 20px 30px 20px;
+    text-transform: none;
+    line-height: 19px;
+    transition: all 0.2s ease;
+
+    &._active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__link {
+    margin: 0 0 10px 0;
+    padding: 0 0 0 30px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__link-a {
+    @extend .menu__link-a;
+  }
+
+  &__link_1 {
+    background: url("../img/header-actions/glob.png") 0 0 no-repeat;
+  }
+
+  &__link_2 {
+    background: url("../img/header-actions/lk.png") 0 0 no-repeat;
+  }
+
+  &__link_3 {
+    background: url("../img/header-actions/stavki.png") 0 0 no-repeat;
+  }
+
+  &__link_4 {
+    background: url("../img/header-actions/lots.png") 0 0 no-repeat;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
