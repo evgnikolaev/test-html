@@ -1,0 +1,40 @@
+.quotes {
+  padding: 60px 0;
+}
+
+.slider-quotes {
+
+  &__body {
+
+  }
+
+  &__slide {
+    display: flex;
+    align-items: center;
+    @media (max-width: 500px) {
+      display: block;
+    }
+  }
+
+  &__img {
+    flex: 0 0 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content {
+    flex: 1 1 auto;
+  }
+
+  &__title {
+    font-size: 25px;
+    font-style: italic;
+    margin: 0 0 37px 0;
+
+  }
+
+  &__author {
+    font-size: 15px;
+  }
+}

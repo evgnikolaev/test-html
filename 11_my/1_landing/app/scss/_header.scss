@@ -1,0 +1,182 @@
+%tpl-header__a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+.header {
+  background: #1c242a;
+  font-size: 14px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    height: 75px;
+
+    @media (max-width: 767px) {
+      justify-content: space-between;
+      position: relative;
+    }
+  }
+
+  &__logo {
+    flex: 0 0 150px;
+    margin: 0 70px 0 0;
+    position: relative;
+    z-index: 2;
+
+    @media (max-width: 767px) {
+      margin: 0;
+    }
+  }
+
+  &__menu {
+    flex: 1 1 auto;
+    @media (max-width: 767px) {
+      position: absolute;
+    }
+  }
+
+  &__actions {
+    flex: 0 0 200px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100%;
+
+    @media (max-width: 920px) {
+      flex: 0 0 auto;
+    }
+  }
+
+  &__region {
+    flex: 1 1 auto;
+    background: url('../img/glob.png') 0 0 no-repeat;
+    line-height: 18px;
+    padding: 0 0 0 30px;
+    color: #fff;
+    @extend %tpl-header__a;
+
+    @media (max-width: 920px) {
+      font-size: 0;
+    }
+  }
+
+  &__user {
+    flex: 0 0 40px;
+  }
+}
+
+.menu-header {
+
+  &__body {
+    @media (max-width: 767px) {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: #1c242a;
+      padding: 75px 0 0 0;
+      overflow-y: scroll;
+      &._active {
+        display: block;
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    color: #fff;
+    @media (max-width: 767px) {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &__li {
+    margin: 0 12px;
+    @media (max-width: 767px) {
+      margin: 0 0 15px 0;
+    }
+  }
+
+  &__a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+.user-header {
+  &__link {
+    background: url('../img/icons/user.png') 0 0 no-repeat;
+    width: 39px;
+    height: 19px;
+    display: block;
+  }
+
+  &__body {
+    display: none;
+    padding: 10px 20px 20px 20px;
+    background: #1c242a;
+    position: absolute;
+    top: 103%;
+    right: 0;
+    width: 175px;
+
+    &._active {
+      display: block;
+    }
+  }
+
+  &__nav {
+    color: #fff;
+  }
+
+  &__li {
+    margin: 0 0 10px 0;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__a {
+    @extend %tpl-header__a;
+    text-transform: none;
+    display: flex;
+    align-items: center;
+
+    span {
+      &:first-child {
+        flex: 0 0 25px;
+      }
+
+      &:last-child {
+        flex: 1 1 auto;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+

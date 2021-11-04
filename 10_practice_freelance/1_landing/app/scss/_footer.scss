@@ -1,0 +1,96 @@
+.footer {
+  background: #1b2329;
+  padding: 45px 0;
+
+  &__container {
+    display: flex;
+    @media (max-width: 767px) {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &__column {
+    &:first-child {
+      flex: 0 0 180px;
+    }
+
+    &_full {
+      flex: 1 1 auto;
+    }
+  }
+
+
+  &__logo {
+    display: inline-block;
+    margin: 0 0 25px 0;
+  }
+
+  &__info {
+    color: #bb9c66;
+  }
+
+  &__menu {
+    padding: 0 30px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    @media (max-width: 767px) {
+      justify-content: center;
+    }
+
+    li {
+      margin: 15px 15px 0 0;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1.4px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__contacts {
+    text-align: right;
+    padding: 15px 0 0 0;
+  }
+
+  &__phone {
+    white-space: nowrap;
+    text-decoration: none;
+    color: #bb9c66;
+    display: flex;
+    text-transform: uppercase;
+    font-size: 35px;
+    align-items: flex-start;
+
+    small {
+      font-size: 25px;
+    }
+
+    @media (max-width: 767px) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__callback {
+    text-decoration: none;
+    color: #bb9c66;
+    background: url("../img/callback-footer.png") 0 50% no-repeat;
+    padding: 0 0 0 15px;
+
+    span {
+      border-bottom: 1px dashed #bb9c66;
+    }
+  }
+
+
+}

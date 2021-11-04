@@ -1,0 +1,45 @@
+/* burger */
+@media (max-width: 767px) {
+  .icon-menu {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 5;
+
+    span {
+      top: calc(50% - 1px);
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #d7b67f;
+
+      &:first-child {
+        top: 0;
+      }
+
+      &:last-child {
+        top: auto;
+        bottom: 0;
+      }
+    }
+
+    &._active {
+      span {
+        transform: rotate(-45deg);
+
+        &:first-child {
+          top: calc(50% - 1px);
+          transform: rotate(-45deg);
+        }
+
+        &:last-child {
+          bottom: calc(50% - 1px);
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+}
