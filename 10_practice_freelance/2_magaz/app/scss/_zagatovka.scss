@@ -9,9 +9,10 @@ html {
 }
 
 
-$font-family: "PT Sans";
-$font-size: 15px;
-$font-color: #000;
+
+$font-family: 'Roboto', sans-serif;
+$font-size: 12px;
+$font-color: #666666;
 
 $min-width: 320px;
 $mw: 970;
@@ -26,9 +27,16 @@ html, body {
 }
 
 body {
+
+  //font-family: 'Oswald', sans-serif;
+  //font-family: 'Play', sans-serif;
+  //font-family: 'Roboto', sans-serif;
+
+
   color: $font-color;
   font-family: $font-family;
   font-size: $font-size;
+
 
   &._lock {
     overflow: hidden;
