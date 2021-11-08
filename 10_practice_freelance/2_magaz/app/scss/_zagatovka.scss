@@ -1,0 +1,65 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+$font-family: "PT Sans";
+$font-size: 15px;
+$font-color: #000;
+
+$min-width: 320px;
+$mw: 970;
+$md1: $mw + 12;
+$md2: 991.98;
+$mw3: 767.98;
+$mw4: 479.98;
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  color: $font-color;
+  font-family: $font-family;
+  font-size: $font-size;
+
+  &._lock {
+    overflow: hidden;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+._container {
+  max-width: $mw + px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
