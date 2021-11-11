@@ -14,9 +14,11 @@ $font-family: 'Roboto', sans-serif;
 $font-size: 12px;
 $font-color: #666666;
 
-$min-width: 320px;
-$mw: 970;
-$md1: $mw + 12;
+$minWidth: 320px;
+$maxWidth:1400;
+$maxWidthContainer:1180;
+$md1: $maxWidthContainer + 12;
+
 $md2: 991.98;
 $mw3: 767.98;
 $mw4: 479.98;
@@ -52,9 +54,9 @@ body {
 }
 
 ._container {
-  max-width: $mw + px;
+  max-width: $maxWidthContainer + px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 15px;
 }
 
 
