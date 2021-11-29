@@ -13,6 +13,7 @@ if (iconMenu != null) {
 	});
 }
 
+
 //menu
 let menuParents = document.querySelectorAll('.menu-page__parent');
 let menuPageLinks = document.querySelectorAll('.menu-page__parent .menu-page__link');
@@ -30,8 +31,6 @@ for (let index = 0; index < menuParents.length; index++) {
 }
 
 
-
-
 //menu-burger
 let menuPageBurger = document.querySelector('.menu-page__burger');
 let menuPageBody = document.querySelector('.menu-page__body');
@@ -40,6 +39,14 @@ menuPageBurger.addEventListener('click', function (e) {
 	menuPageBody.classList.toggle('_active');
 });
 
+
+//search-page
+let searchSelect = document.querySelector('.search-page__title');
+let categoriesSearch = document.querySelector('.categories-search');
+searchSelect.addEventListener('click', function (e) {
+	searchSelect.parentElement.classList.toggle('_active');
+	categoriesSearch.classList.toggle('_active');
+});
 
 
 

@@ -164,6 +164,94 @@ body._lock {
   margin: 0 auto;
   padding: 0 15px
 }
+.btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 25px;
+  height: 39px;
+  background: #f68038;
+  -webkit-transition: all .3s ease 0s;
+  -o-transition: all .3s ease 0s;
+  transition: all .3s ease 0s;
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 900;
+  cursor: pointer;
+  border: 0;
+  outline: 0
+}
+@media (min-width:992px) {
+  .btn:hover {
+    background: #f6514c
+  }
+}
+input[type=email],
+input[type=tel],
+input[type=text],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none
+}
+input {
+  border-radius: 0!important;
+  width: 100%;
+  display: block;
+  padding: 0 20px;
+  border: 0
+}
+textarea {
+  resize: none;
+  padding: 0
+}
+.checkbox {
+  position: relative
+}
+.checkbox input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  visibility: hidden
+}
+.checkbox input:checked + .checkbox__text:before {
+  background: #aaa
+}
+.checkbox__text {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  font-size: 16px;
+  color: #f3f3f3;
+  line-height: 1.25
+}
+.checkbox__text:before {
+  content: "";
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  margin: 0 14px 0 0;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 20px;
+  flex: 0 0 20px;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 18px;
+  border: 1px solid #a7a9ac
+}
 .header {
   background: #fff url(../img/header/bg.png) top no-repeat;
   color: #000;
@@ -896,4 +984,104 @@ body._lock {
   color: #333;
   font-weight: 900;
   font-size: 24px
+}
+.search-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative
+}
+.search-page__select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #f3f3f3
+}
+.search-page__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 14px;
+  cursor: pointer;
+  color: #666;
+  font-weight: 300
+}
+.search-page__title span {
+  margin: 0 13px;
+  border-bottom: 1px dashed
+}
+.search-page__title:before {
+  content: "";
+  width: 17px;
+  height: 17px;
+  background: url(../img/page/content/search-loop.png) 0 0 no-repeat
+}
+.search-page__title:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: url(../img/page/content/search-arrow.png) 0 0 no-repeat
+}
+.search-page__title._active:after {
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg)
+}
+.search-page__categories {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%
+}
+.search-page__input {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  border-top: 2px solid #f3f3f3;
+  border-bottom: 2px solid #f3f3f3
+}
+.search-page__input input {
+  height: 100%
+}
+.categories-search {
+  display: none;
+  border: 1px solid #f3f3f3;
+  background: #fff;
+  border-bottom: 4px solid #f68038
+}
+.categories-search._active {
+  display: block
+}
+.categories-search__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+.categories-search__column {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 33.33%;
+  flex: 0 0 33.33%;
+  padding: 27px 40px;
+  border-right: 1px solid #f3f3f3
+}
+.categories-search__column:last-child {
+  border: 0
+}
+.categories-search__list li {
+  margin: 0 0 20px 0
+}
+.categories-search__list li:last-child {
+  margin: 0
+}
+.categories-search__checkbox input:checked + .checkbox__text {
+  color: #f68038
+}
+.categories-search__checkbox .checkbox__text {
+  color: #999
+}
+.categories-search__checkbox .checkbox__text:before {
+  display: none
 }
