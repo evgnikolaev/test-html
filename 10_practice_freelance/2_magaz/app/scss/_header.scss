@@ -2,7 +2,7 @@
   background: #fff url("../img/header/bg.png") top no-repeat;
   color: #000;
   position: fixed;
-  z-index: 10;
+  z-index: 102;
   top: 0;
   left: 0;
   width: 100%;
@@ -275,6 +275,9 @@
 
 
 .bottom-header {
+  @media (max-width: 640px) {
+    display: none;
+  }
 
   &__container {
   }
