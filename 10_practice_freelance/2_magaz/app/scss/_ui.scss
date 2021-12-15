@@ -1,0 +1,26 @@
+._arrow {
+  background: url("../img/page/sl_arrow_r.png") 0 0 no-repeat;
+  width: 33px;
+  height: 27px;
+  cursor: pointer;
+
+
+  &_prev {
+    transform: rotate(180deg);
+    @media (min-width: 992px) {
+      &:hover {
+        background: url("../img/page/sl_arrow_l.png") 0 0 no-repeat;
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  &_next {
+    @media (min-width: 992px) {
+      &:hover {
+        background: url("../img/page/sl_arrow_l.png") 0 0 no-repeat;
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}
