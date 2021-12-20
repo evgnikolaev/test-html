@@ -118,7 +118,6 @@ if (document.querySelector('.mainslider')) {
 }
 
 
-
 //products-slider
 if (document.querySelector('.products-slider__item')) {
 	let productSlider = new Swiper('.products-slider__item', {
@@ -180,10 +179,50 @@ if (document.querySelector('.brandsSlider')) {
 }
 
 
+//фильтр цена
+const priceSlider = document.querySelector('.price-filter__slider');
+
+noUiSlider.create(priceSlider, {
+	start: [0, 100],
+	connect: true,
+	tooltips: [wNumb({decimals: 0}), wNumb({decimals: 0})],
+	range: {
+		'min': 0,
+		'max': 100
+	}
+});
+
+
+const priceStart = document.getElementById('price-start');
+const priceEnd = document.getElementById('price-end');
+
+priceStart.addEventListener('change', function () {
+	priceSlider.noUiSlider.set([priceStart.value, null]);
+});
+
+priceEnd.addEventListener('change', function () {
+	priceSlider.noUiSlider.set([null, priceEnd.value]);
+});
 
 
 
 
 
+//filter
+let filterContent = document.querySelector('.filter__content');
+let filterTitle = document.querySelector('.filter__title');
+filterTitle.addEventListener('click', function (e) {
+	filterTitle.classList.toggle('_active');
+	filterContent.classList.toggle('_active');
+});
 
+
+//spoller
+let spoller = document.querySelectorAll('._spoller');
+for (let index = 0; index < spoller.length; index++) {
+	const item = spoller[index];
+	item.addEventListener('click', function (e) {
+		item.classList.toggle('_active');
+	});
+}
 

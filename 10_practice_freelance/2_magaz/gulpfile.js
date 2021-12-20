@@ -54,7 +54,7 @@ function styles() {
 }
 
 function html() {
-	return src(['app/html/index.html'])
+	return src(['app/html/index.html','app/html/catalog.html'])
 		.pipe(fileinclude())
 		.pipe(dest('app/'))
 }

@@ -1,0 +1,289 @@
+.filter {
+  border: 4px solid #72c9d4;
+
+  // .filter__title
+
+  &__title {
+    padding: 25px 15px;
+    color: #36949f;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  @media (max-width: $md2+px) {
+    &__content {
+      display: none;
+
+      &._active {
+        display: block;
+      }
+    }
+  }
+
+  // .filter__body
+
+  &__body {
+
+  }
+
+  // .filter__section
+
+  &__section {
+    padding: 20px 15px;
+    border-bottom: 1px solid #72c9d4;
+
+    &:last-child {
+      border: 0;
+    }
+  }
+
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+  }
+
+  &__btn {
+    padding: 0 15px;
+    font-size: 10px;
+    text-transform: none;
+  }
+}
+
+.section-filter {
+
+  // .section-filter__title
+
+  &__title {
+    color: #36949f;
+    font-weight: 700;
+    font-size: 16px;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &._spoller {
+      cursor: pointer;
+
+      &:after {
+        content: '';
+        border: 1px solid #72c9d4;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        flex: 0 0 30px;
+        background: url("../img/filter/spoller.png") center no-repeat;
+        transition: 0.3s transform ease 0s;
+      }
+
+      &._active {
+        &:after {
+          transform: rotate(90deg);
+        }
+      }
+    }
+
+    &._spoller + .section-filter__body {
+      display: none;
+    }
+
+    &._spoller._active + .section-filter__body {
+      display: block;
+    }
+  }
+
+  // .section-filter__body
+
+  &__body {
+    padding: 14px 0 0 0;
+  }
+
+  // .section-filter__checkbox
+
+  &__checkbox {
+    display: block;
+    margin: 0 0 15px 0;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+
+.price-filter {
+  &__slider {
+    height: 4px;
+    background: #eaeaea;
+    margin: 0 0 50px 0;
+
+    .noUi-connect {
+      background-color: #ffcda5;
+    }
+
+
+    .noUi-handle {
+      width: 23px;
+      height: 23px;
+      border: 1px solid #f68038;
+      background: #fff;
+      border-radius: 50%;
+      top: -10px;
+      right: -12px;
+
+
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 15px;
+        height: 15px;
+        background-color: #f68038;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+      }
+    }
+
+    .noUi-tooltip {
+      display: block;
+      position: absolute;
+      border: none;
+      background: none;
+      color: #999;
+      font-size: 12px;
+      bottom: -27px;
+      left: 50%;
+      padding: 5px;
+      text-align: center;
+      white-space: nowrap;
+    }
+  }
+
+  &__values {
+  }
+}
+
+
+.values-price-filter {
+  display: flex;
+  margin: 0 -15px;
+
+  // .values-price-filter__column
+
+  &__column {
+    padding: 0 15px;
+    flex: 0 1 50%;
+    display: flex;
+    align-items: center;
+  }
+
+
+  // .values-price-filter__label
+
+  &__label {
+    color: #999999;
+    font-size: 12px;
+    font-weight: 300;
+  }
+
+  // .values-price-filter__input
+
+  &__input {
+    flex: 1 1 auto;
+    padding: 0 0 0 10px;
+
+    input {
+      border: 1px solid #999999;
+      height: 20px;
+      padding: 0 10px;
+      font-size: 12px;
+    }
+  }
+}
+
+
+.compare-filter {
+
+  // .compare-filter__items
+
+  &__items {
+    margin: 0 0 20px 0;
+  }
+
+  // .compare-filter__item
+
+  &__item {
+    margin: 0 0 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  // .compare-filter__link
+
+  &__link {
+    color: #1ab9ce;
+    font-size: 12px;
+  }
+
+  // .compare-filter__remove
+
+  &__remove {
+    flex: 0 0 21px;
+    width: 21px;
+    height: 21px;
+    background: url('../img/filter/remove2.png') center no-repeat;
+
+    &:hover {
+      background: url('../img/filter/remove1.png') center no-repeat;
+    }
+  }
+
+  // .compare-filter__footer
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // .compare-filter__button
+
+  &__button {
+    display: block;
+    background: #19b9cd;
+    border-radius: 20px;
+    padding: 0 13px;
+    height: 33px;
+    text-decoration: none;
+
+    span {
+      display: block;
+      padding: 0 0 0 30px;
+      line-height: 33px;
+      background: url('../img/filter/compare.png') left no-repeat;
+      text-transform: uppercase;
+      color: #fff;
+    }
+  }
+
+  // .compare-filter__clean
+
+  &__clean {
+    display: block;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #e5e5e5 url('../img/filter/trash.png') center no-repeat;
+  }
+}
