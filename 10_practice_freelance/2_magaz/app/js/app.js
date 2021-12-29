@@ -180,41 +180,41 @@ if (document.querySelector('.brandsSlider')) {
 
 
 //фильтр цена
-const priceSlider = document.querySelector('.price-filter__slider');
+if (document.querySelector('.price-filter__slider')) {
+	const priceSlider = document.querySelector('.price-filter__slider');
 
-noUiSlider.create(priceSlider, {
-	start: [0, 100],
-	connect: true,
-	tooltips: [wNumb({decimals: 0}), wNumb({decimals: 0})],
-	range: {
-		'min': 0,
-		'max': 100
-	}
-});
-
-
-const priceStart = document.getElementById('price-start');
-const priceEnd = document.getElementById('price-end');
-
-priceStart.addEventListener('change', function () {
-	priceSlider.noUiSlider.set([priceStart.value, null]);
-});
-
-priceEnd.addEventListener('change', function () {
-	priceSlider.noUiSlider.set([null, priceEnd.value]);
-});
+	noUiSlider.create(priceSlider, {
+		start: [0, 100],
+		connect: true,
+		tooltips: [wNumb({decimals: 0}), wNumb({decimals: 0})],
+		range: {
+			'min': 0,
+			'max': 100
+		}
+	});
 
 
+	const priceStart = document.getElementById('price-start');
+	const priceEnd = document.getElementById('price-end');
 
+	priceStart.addEventListener('change', function () {
+		priceSlider.noUiSlider.set([priceStart.value, null]);
+	});
 
+	priceEnd.addEventListener('change', function () {
+		priceSlider.noUiSlider.set([null, priceEnd.value]);
+	});
+}
 
 //filter
-let filterContent = document.querySelector('.filter__content');
-let filterTitle = document.querySelector('.filter__title');
-filterTitle.addEventListener('click', function (e) {
-	filterTitle.classList.toggle('_active');
-	filterContent.classList.toggle('_active');
-});
+if (document.querySelector('.filter__content')) {
+	let filterContent = document.querySelector('.filter__content');
+	let filterTitle = document.querySelector('.filter__title');
+	filterTitle.addEventListener('click', function (e) {
+		filterTitle.classList.toggle('_active');
+		filterContent.classList.toggle('_active');
+	});
+}
 
 
 //spoller
@@ -223,6 +223,20 @@ for (let index = 0; index < spoller.length; index++) {
 	const item = spoller[index];
 	item.addEventListener('click', function (e) {
 		item.classList.toggle('_active');
+	});
+}
+
+//products-slider
+if (document.querySelector('.imagesMainSlider')) {
+	console.log(111);
+	let imagesMainSlider = new Swiper('.imagesMainSlider', {
+		observe: true,
+		observeParents: true,
+		slidesPerView: 1,
+		spaceBetween: 0,
+		speed: 800,
+		// autoHeight: true,
+		// loop: true,
 	});
 }
 

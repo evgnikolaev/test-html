@@ -1,3 +1,252 @@
+.breadcrumbs {
+  overflow: auto;
+  margin: 0 0 25px 0;
+  height: 20px;
+
+  // .breadcrumbs__list
+
+  &__list {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 14px;
+
+    li {
+      margin: 0 15px 0 0;
+      padding: 0 20px 0 0;
+      background: url('../img/page/breadcrumbs.png') right /10px no-repeat;
+
+      &:last-child {
+        margin: 0;
+        padding: 0;
+        background: none;
+      }
+    }
+  }
+
+  // .breadcrumbs__link
+
+  &__link {
+    color: #1ab9ce;
+  }
+
+  // .breadcrumbs__item
+
+  &__item {
+    color: #999999;
+  }
+}
+
+
+//===================== catalog ======================
+.catalog {
+
+  // .catalog__title
+
+  &__title {
+    color: #dadada;
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+  }
+
+  // .catalog__actions
+
+  &__actions {
+    margin: 0 0 15px 0;
+  }
+
+  // .catalog__navi
+
+  &__navi {
+  }
+
+}
+
+.actions-catalog {
+  background: #f3f3f3;
+
+  align-items: center;
+  padding: 10px 20px;
+
+  @media (min-width: 540px) {
+    display: flex;
+  }
+  // .actions-catalog__order
+
+  &__order {
+    display: flex;
+    align-items: center;
+    @media (max-width: 540px) {
+      margin: 0 0 20px 0;
+    }
+  }
+
+  // .actions-catalog__view
+
+  &__view {
+  }
+}
+
+.order-catalog {
+  flex: 1 1 auto;
+  // .order-catalog__label
+
+  &__label {
+    color: #333333;
+    font-size: 14px;
+    margin: 0 20px 0 0;
+  }
+
+  &__select {
+
+  }
+}
+
+.view-catalog {
+  display: flex;
+
+  // .view-catalog__item
+
+  &__item {
+    width: 36px;
+    height: 36px;
+    margin: 0 0 0 8px;
+    @media (max-width: 540px) {
+      margin: 0 10px 0 0;
+    }
+    // .view-catalog__item_grid
+
+    &_grid {
+      background: url('../img/catalog/plitka.png') center no-repeat;
+    }
+
+    // .view-catalog__item_list
+    &_list {
+      background: url('../img/catalog/spisok.png') center no-repeat;
+    }
+  }
+}
+
+
+// ==================== navi-catalog =====================
+.navi-catalog {
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+  padding: 10px 15px;
+
+  @media (min-width: 540px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  // .navi-catalog__show-catalog
+
+  &__show-catalog {
+    @media (min-width: 540px) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  // .navi-catalog__pages
+
+  &__pages {
+  }
+
+  &_top {
+    margin: 0 0 30px 0;
+  }
+
+  &_bottom {
+
+  }
+}
+
+.show-catalog {
+  display: flex;
+  align-items: center;
+  @media (max-width: 540px) {
+    margin: 0 0 15px 0;
+  }
+  // .show-catalog__label
+
+  &__label {
+    color: #333333;
+    font-size: 14px;
+    margin: 0 20px 0 0;
+  }
+
+  // .show-catalog__select
+
+  &__select {
+  }
+}
+
+.pagging {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // .pagging__arrow
+
+  &__arrow {
+    background: url(../img/page/sl_arrow_l.png) 0 0 no-repeat;
+    width: 33px;
+    height: 27px;
+    cursor: pointer;
+
+    &:hover {
+      background: url(../img/page/sl_arrow_r.png) 0 0 no-repeat;
+    }
+
+    &:first-child {
+      &:hover {
+        transform: rotate(180deg);
+      }
+    }
+
+    &:last-child {
+      transform: rotate(180deg);
+
+      &:hover {
+        transform: rotate(0);
+      }
+    }
+
+
+  }
+
+  // .pagging__list
+
+  &__list {
+    display: flex;
+    margin: 0 35px;
+  }
+
+  // .pagging__item
+
+  &__item {
+    text-decoration: none;
+    width: 33px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #333;
+    font-weight: 900;
+
+    &_active {
+      background-color: #fd8424;
+      color: #fff;
+    }
+  }
+}
+
+
+//===================== filter ======================
 .filter {
   border: 4px solid #72c9d4;
 
