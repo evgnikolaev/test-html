@@ -228,15 +228,76 @@ for (let index = 0; index < spoller.length; index++) {
 
 //products-slider
 if (document.querySelector('.imagesMainSlider')) {
-	console.log(111);
+	let imagesSubSlider = new Swiper('.imagesSubSlider', {
+		observe: true,
+		observeParents: true,
+		slidesPerView: 4,
+		spaceBetween: 0,
+		speed: 800,
+		// autoHeight: true,
+		// loop: true,
+	});
+
 	let imagesMainSlider = new Swiper('.imagesMainSlider', {
 		observe: true,
 		observeParents: true,
 		slidesPerView: 1,
 		spaceBetween: 0,
 		speed: 800,
+		thumbs: {
+			swiper: imagesSubSlider
+		}
 		// autoHeight: true,
 		// loop: true,
 	});
+
 }
+
+
+//quantity
+let quantityButtons = document.querySelectorAll('.quantity__button');
+for (let index = 0; index < quantityButtons.length; index++) {
+	const quantityButton = quantityButtons[index];
+	quantityButton.addEventListener('click', function (e) {
+		let value = parseInt(quantityButton.closest('.quantity').querySelector('input').value);
+		if (quantityButton.classList.contains('quantity__button_plus')) {
+			value++;
+		} else {
+			value = value - 1;
+			if (value < 1) {
+				value = 1;
+			}
+		}
+		quantityButton.closest('.quantity').querySelector('input').value = value;
+	})
+}
+
+
+// Табы
+let tabsItems = document.querySelectorAll('._tabs-item');
+let tabsBlocks = document.querySelectorAll('._tabs-block');
+for (let i = 0; i < tabsItems.length; i++) {
+	const tabsItem = tabsItems[i];
+
+	tabsItem.addEventListener('click', function (e) {
+		for (let j = 0; j < tabsItems.length; j++) {
+			tabsItems[j].classList.remove('_active');
+			tabsBlocks[j].classList.remove('_active');
+		}
+
+		tabsItems[i].classList.add('_active');
+		tabsBlocks[i].classList.add('_active');
+	})
+}
+
+
+
+
+
+
+
+
+
+
+
 
