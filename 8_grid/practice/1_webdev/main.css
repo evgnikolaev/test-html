@@ -1,0 +1,60 @@
+/* верстка при помощи флексов
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.element-1 {
+	order: 1;
+	flex: 0 0 100%;
+	align-self: flex-start;
+}
+
+.element-2 {
+	order: 2;
+	flex: 0 0 30%;
+}
+
+.element-3 {
+	order: 4;
+	flex: 0 0 30%;
+}
+
+.element-6 {
+	order: 5;
+	flex: 0 0 100%;
+}
+
+.content {
+	order: 3;
+	float: 1 0 30%;
+}*/
+
+
+.container {
+	height: 100vh;
+	display: grid;
+	grid-template-columns: minmax(150px, 200px) 1fr minmax(150px, 200px);
+	grid-template-rows: auto 1fr auto;
+	grid-template-areas: "header header header"
+							"main nav  aside"
+							"footer footer footer";
+}
+
+header {grid-area: header;	background-color: #ffb019;}
+nav {grid-area: nav;	background-color: #3497ff;}
+aside {grid-area: aside;	background-color: #fffb21;}
+main {grid-area: main;	background-color: #26ff23;}
+footer {grid-area: footer;	background-color: #fe31ff;}
+
+@media(max-width: 510px){
+	aside{
+		display: none;
+	}
+	.container {
+		grid-template-columns: repeat(2,1fr);
+		grid-template-areas: "header header" "main nav" "footer footer";
+	}
+}

@@ -14,8 +14,7 @@ https://www.youtube.com/watch?v=GV92IdMGFfA&list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwL
 
 	1) display: grid;  - для контейнера включаем гриды.
 
-	2) grid-template-columns (grid-template-rows) и
-       grid-column-gap (grid-row-gap)
+	2) grid-template-columns (grid-template-rows) и  grid-column-gap (grid-row-gap)
 
 			grid-template-columns: 100px 1fr 200px; - количество колонок
 		        ( grid-template-rows:  1fr 300px;         - количество строк )
@@ -37,16 +36,31 @@ https://www.youtube.com/watch?v=GV92IdMGFfA&list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwL
 		        Повторяем колонки одинаковой ширины.
 
 
-            grid-template = grid-template-rows / grid-template-columns
-            Также есть явная сетка и нефвная сетка (когда элемент выходит за сетку). Для неявной сетки есть свои свойства: grid-auto-rows (grid-auto-columns)
-			Также лучше процентные значения для padding и margin лучше не указывать, т.к. браузеры по разному считают эти проценты.
-
 
 		 Если для какой то колонки не задать ширину, по умолчанию auto.
 
             grid-gap:
 				grid-column-gap: 12px;  - Отступы между колонками.
 				grid-row-gap: 11px; -  Отступы между строками.
+				gap: 10px; - общий отступ
+
+    2а)  grid-template - объединение grid-template-rows и grid-template-columns
+
+	        grid-template: repeat(2,1fr) / repeat(3,1fr);
+			grid-template: grid-template-rows  /  grid template-columns;
+
+
+	        Еще одна запись:
+			grid-template: [start] "header header" 100px [row2]
+						   [row2] "side content" 1fr [row-end] / 150px 1fr;
+
+				header {grid-area: header;}
+				side {grid-area: side;}
+				content {grid-area: content;}
+
+
+            Также есть явная сетка и неявная сетка (когда элемент выходит за сетку, или не попадает под созданную структуру сетки).
+            Для неявной сетки есть свои свойства: grid-auto-rows:200px (grid-auto-columns - работает тогда, когда мы явно не задали сетку при помощи grid-template-columns)
 
 
 
@@ -68,7 +82,7 @@ https://www.youtube.com/watch?v=GV92IdMGFfA&list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwL
 
 
 	4) Именование grid-линий
-		grid-template-columns: [col1] 200px [col2] 450px [col3] 200px [col4] 200px;
+		grid-template-columns: [col1] 200px [col2] 450px [col3] 200px [col4] 200px [col-end];
             col1-col4  - это линии начала столбца!!!
 		grid-column:col1/col2;  - с какой линии до какой
 		grid-column:col1/span 3; - с какой линии, сколько ширин столбцов взять
@@ -79,6 +93,12 @@ https://www.youtube.com/watch?v=GV92IdMGFfA&list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwL
 
 
 	5) Выравнивание контента внутри элемента
+
+        !!!
+        - Элементы для display: grid будут вести себя как блочные элементы (несмотря на то что там могут быть и например span)
+		- margin для элементов не будет схлопываться
+        - Также лучше процентные значения для padding и margin лучше не указывать, т.к. браузеры по разному считают эти проценты.
+		- margin:auto выравнинвает по центру как по вертикали так и по горизонтали
 
         для всех элементов контейнера (задаем там, где display:grid)
             align-items:   stretch (по умолчанию) start end center;  по Y
@@ -144,4 +164,23 @@ https://www.youtube.com/watch?v=GV92IdMGFfA&list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwL
 			aside {grid-area: aside;}
 			main {grid-area: main;}
 			footer {grid-area: footer;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
