@@ -1,0 +1,107 @@
+/*============================== reset.css ============================*/
+html {
+	box-sizing: border-box;
+	font-family: "PT Sans", "Arial", sans-serif;
+	font-weight: bold;
+}
+
+body {
+	line-height: 1.75;
+	font-size: 16px;
+}
+
+*, *:after, *:before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+ul {
+	list-style: none;
+}
+
+.container {
+	max-width: 1200px;
+	margin: auto;
+	padding: 0 20px;
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.content {
+	padding: 30px 3%;
+}
+
+h1 {
+	margin: 0 0 30px 0;
+}
+
+.grid {
+	font-size: 30px;
+	position: relative;
+	margin: 0 0 40px 0;
+}
+
+
+/*============================== grid ============================*/
+.grid__body {
+	display: grid;
+	grid-template: repeat(2, 1fr)/repeat(3, 1fr);
+	justify-items: stretch;
+	align-items: end;
+
+	background: #ddd;
+}
+
+.grid__item {
+
+	background: #fff;
+	text-align: center;
+	border: 2px dashed #ccc;
+	padding: 30px;
+}
+
+.grid__item_1 {
+	margin: 15px;
+}
+
+.grid__item_2 {
+	justify-self: start;
+	align-self: start;
+}
+
+.grid__item_3 {
+}
+
+.grid__item_4 {
+}
+
+.grid__item_5 {
+}
+
+.grid__item_6 {
+	justify-self: end;
+	align-self: end;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

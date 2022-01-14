@@ -35,7 +35,8 @@ https://www.youtube.com/watch?v=GV92IdMGFfA&list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwL
 		    grid-template-columns: repeat(4, 1fr);
 		        Повторяем колонки одинаковой ширины.
 
-
+            grid-template-columns: auto 1fr minmax(40px, auto);
+				1fr будет сетку делить на одинаковые ячейки, auto же будет подстраивать под контент
 
 		 Если для какой то колонки не задать ширину, по умолчанию auto.
 
@@ -60,8 +61,12 @@ https://www.youtube.com/watch?v=GV92IdMGFfA&list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwL
 
 
             Также есть явная сетка и неявная сетка (когда элемент выходит за сетку, или не попадает под созданную структуру сетки).
-            Для неявной сетки есть свои свойства: grid-auto-rows:200px (grid-auto-columns - работает тогда, когда мы явно не задали сетку при помощи grid-template-columns)
-
+            Для неявной сетки есть свои свойства: grid-auto-rows:200px
+            (grid-auto-columns - работает тогда, когда мы явно не задали сетку при помощи grid-template-columns) .
+            Также мы можем использовать:
+			    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				grid-auto-rows: 1fr;
+			Так как сетка задается автоматически, мы можем задать одинаковые высоты карточкам например на разных уровнях строк сетки
 
 
 	3) Управление размерами и позицией отдельного элемента ( 1_позиция.jpg ):
