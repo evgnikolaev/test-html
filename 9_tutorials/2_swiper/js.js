@@ -306,6 +306,35 @@ let myImageSlider = new Swiper('.image-slider', {
 	observeSlideChildren: true,
 
 
+	//Доступность (для людей с ОВЗ, для устройств)
+	a11y: {
+		//Включить, выключить
+		enabled: true,
+		//Сообщения
+		prevSlideMessage: 'Previous slide',
+		nextSlideMessage: 'Next slide',
+		firstSlideMessage: 'This is the first slide',
+		lastSlideMessage: 'This is the last slide',
+		paginationBulletMessage: 'Go to slide {{index}}',
+		notificationClass: 'swiper-notification',
+		containerMessage: '',
+		containerRoleDescriptionMessage: '',
+		itemRoleDescriptionMessage: ''
+	},
+
+
+	//События
+	on: {
+		//Событие инициализации
+		init: () => {
+			console.log('Слайдер запущен');
+		},
+		//Событие смены слайда
+		slideChange: () => {
+			console.log('Слайдер переключен');
+		}
+	}
+
 });
 
 
@@ -351,6 +380,71 @@ let myVirtualSlider = new Swiper('.virtual-slider', {
 	},
 
 });
+
+
+/*
+	Также можно править параметры за пределами инициальзации
+ */
+
+
+//Получение
+let qSlides = myImageSlider.slides.length;
+console.log(qSlides);
+//Изменение
+myImageSlider.params.speed = 3000;
+
+
+/*
+	Методы
+ */
+
+
+//Обновить слайдер
+myImageSlider.update();
+//Переключить слайдер на 2 , со скоростью 800
+myImageSlider.slideTo(2, 800);
+
+
+/*
+	События
+ */
+myImageSlider.on('slideChange', () => {
+	console.log('Слайдер переключен 2');
+});
+
+
+/*
+	Пример автопрокрутки при наведении
+ */
+let sliderBlock = document.querySelector('.image-slider');
+sliderBlock.addEventListener('mouseenter', (e) => {
+	myImageSlider.params.autoplay.disableOnInteraction = false;
+	myImageSlider.params.autoplay.delay = 500;
+	myImageSlider.autoplay.start();
+});
+sliderBlock.addEventListener('mouseleave', (e) => {
+	myImageSlider.autoplay.stop();
+});
+
+
+/*
+	Пример работы фракции и прогрессбара вместе
+ */
+
+let mySliderAllSlides = document.querySelector('.image-slider__total');
+let mySliderCurrentSlide = document.querySelector('.image-slider__current');
+mySliderAllSlides.innerHTML = myImageSlider.slides.length;
+myImageSlider.on('slideChange', () => {
+	let currentSlide = ++myImageSlider.realIndex;
+	mySliderCurrentSlide.innerHTML = currentSlide;
+});
+
+
+
+
+
+
+
 
 
 

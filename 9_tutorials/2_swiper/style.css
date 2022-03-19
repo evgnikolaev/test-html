@@ -138,8 +138,19 @@ html {
 }
 
 
+/* Пример работы фракции и прогрессбара вместе */
+.image-slider__fraction {
 
+}
 
+.image-slider__current {
 
+}
 
+.image-slider__separator {
 
+}
+
+.image-slider__total {
+
+}
