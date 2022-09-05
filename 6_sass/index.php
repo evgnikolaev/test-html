@@ -185,3 +185,75 @@
 
 
 
+
+
+
+
+
+
+ ===================================================
+	9.
+
+											//Миксины, extend
+											@mixin my-mixin($color,$height) {
+											  color: $color;
+											  height: $height;
+											}
+
+
+											%tpl {
+											  color: #000;
+											}
+
+
+											body {
+											  @include my-mixin(pink, 100px);
+											  @extend %tpl;
+											}
+
+
+		//Интерполяция
+		$icon-name: 'user';
+
+		$bg-color: 'blue';
+
+		:root {
+		  --bg-color-name: #{$bg-color};
+		}
+
+
+		.icon-#{$icon-name} {
+		  color: green;
+		  background: var(--bg-color-name);
+		}
+
+
+																	//each
+
+																	$font-weights: bolder, bold, normal, lighter;
+
+																	@each $value in $font-weights {
+
+																	  .font-#{$value} {
+																	    font-weight: $value;
+																	  }
+																	}
+
+
+																	$btn-map: (
+																	        primary blue white,
+																	        success palegreen black,
+																	        danger indianred white,
+																	        default white black
+																	);
+
+																	//@each $name, $bg-color,$font-color in $btn-map{
+																	//  .btn-#{$name}{
+																	//    background-color: $bg-color;
+																	//    color: $font-color;
+																	//  }
+																	//}
+
+		@debug $btn-map;
+
+
