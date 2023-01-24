@@ -1,0 +1,80 @@
+.body {
+	padding: 50px;
+}
+
+.box {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-items: center;
+}
+
+.svg {
+	width: 400px;
+	height: 300px;
+	border: 1px solid #000;
+	margin-bottom: 50px;
+}
+
+.svg-text {
+	overflow: visible;
+}
+
+.text {
+	fill: #000;
+}
+
+
+/*  stroke-dasharray,  stroke-dashoffset */
+.rect {
+	stroke: brown;
+	stroke-width: 10;
+	fill: none;
+	stroke-dasharray: 700;
+	stroke-dashoffset: 700;
+	transition: all 0.5s ease;
+}
+
+.svg-rect:hover rect {
+	stroke-dashoffset: 0;
+}
+
+.circle {
+	transition: all 0.5s ease;
+	stroke-dasharray: 630;
+	stroke-dashoffset: 630;
+}
+
+.svg-circle:hover circle {
+	stroke-dashoffset: 0;
+}
+
+
+/*  clipPath */
+.image {
+	/*
+	 https://bennettfeely.com/clippy/  - clipPath
+	 clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	 или
+	 */
+	clip-path: url(#apple);
+	width: 300px;
+}
+
+
+.polyline {
+	stroke-linejoin: miter;
+	/*
+	промежуточные точки
+	miter - обычные, прямоуголные
+	bevel - срезаются
+	round - закругление
+	*/
+	stroke-linecap: square;
+	/*
+	конечные точки
+	butt - обычные, прямоуголные
+	square - за пределы, прямоуголные
+	round - закругление
+	*/
+}
+
