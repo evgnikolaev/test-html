@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+<!--
+	https://www.youtube.com/watch?v=TCGWuvOxw28&t=3s&ab_channel=OpenCode
+-->
+
+
+<svg width="262" height="247" viewBox="0 0 262 247" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+	<defs>
+		<filter id="goo">
+			<feGaussianBlur in="SourceGraphic" stdDeviation="15" result="blur"/>
+			<!--  ! не сработало -->
+			<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 17 -7" result="goo"/>
+		</filter>
+	</defs>
+
+
+	<path id="path1" d="M262 173C262 239.274 185.692 240 115 240C44.3075 240 16 178.274 16 112C16 45.7258 44.3075 0 115 0C185.692 0 262 106.726 262 173Z" fill="transparent"/>
+	<path id="path2" d="M262 173C262 239.274 109.692 236 39 236C-31.6924 236 15.9999 178.274 15.9999 112C15.9999 45.7258 111.307 2 182 2C252.692 2 262 106.726 262 173Z" fill="transparent"/>
+
+
+	<g filter="url(#goo)">
+		<circle r="20" fill="blue">
+			<!-- Заставляет двигаться один объект по границам дргуого объекта -->
+			<animateMotion dur="10s" repeatCount="indefinite">
+				<mpath xlink:href="#pathMain"></mpath>
+			</animateMotion>
+		</circle>
+
+		<circle r="10" fill="blue">
+			<!-- Заставляет двигаться один объект по границам дргуого объекта -->
+			<animateMotion dur="2s" repeatCount="indefinite">
+				<mpath xlink:href="#path1"></mpath>
+			</animateMotion>
+		</circle>
+
+		<circle r="15" fill="blue">
+			<!-- Заставляет двигаться один объект по границам дргуого объекта -->
+			<animateMotion dur="5s" repeatCount="indefinite">
+				<mpath xlink:href="#path2"></mpath>
+			</animateMotion>
+		</circle>
+
+
+		<path id="pathMain" d="M236 172C236 238.274 155.692 247 85 247C14.3075 247 9.00012 134.274 9.00012 68C9.00012 1.72583 46.3077 35 117 35C187.693 35 236 105.726 236 172Z" fill="red">
+			<animate
+					attributeName="d"
+					dur="2s"
+					repeatCount="indefinite"
+					values="M236 172C236 238.274 155.692 247 85 247C14.3075 247 9.00012 134.274 9.00012 68C9.00012 1.72583 46.3077 35 117 35C187.693 35 236 105.726 236 172Z;
+			M262 173C262 239.274 185.692 240 115 240C44.3075 240 16 178.274 16 112C16 45.7258 44.3075 0 115 0C185.692 0 262 106.726 262 173Z;
+			M262 173C262 239.274 109.692 236 39 236C-31.6924 236 15.9999 178.274 15.9999 112C15.9999 45.7258 111.307 2 182 2C252.692 2 262 106.726 262 173Z;
+			M236 172C236 238.274 155.692 247 85 247C14.3075 247 9.00012 134.274 9.00012 68C9.00012 1.72583 46.3077 35 117 35C187.693 35 236 105.726 236 172Z"
+			/>
+		</path>
+	</g>
+</svg>
+
+</body>
+</html>

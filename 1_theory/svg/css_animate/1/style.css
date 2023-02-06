@@ -1,0 +1,43 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	width: 200px;
+	margin: 50px auto;
+}
+
+svg path {
+	animation: pathAnim 1.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+svg path:nth-child(2) {
+	animation-delay: 0.2s;
+}
+svg path:nth-child(3) {
+	animation-delay: 0.5s;
+}
+
+@keyframes pathAnim {
+	0% {
+		d: path("M290 -0.000237184C203.6 0.799763 61.3333 98.9998 0 117V277H938V86.9998C878 117 850 148 689 148C528 148 398 -1.00024 290 -0.000237184Z")
+	}
+	50% {
+		d: path("M279 148C192.6 148.8 61 130 0 117V277H938V86.9998C894 64 835 -1 674 -1C513 -1 387 147 279 148Z")
+	}
+	100% {
+		d: path("M290 -0.000237184C203.6 0.799763 61.3333 98.9998 0 117V277H938V86.9998C878 117 850 148 689 148C528 148 398 -1.00024 290 -0.000237184Z")
+	}
+}
+
+
+
+
+
+
+
+

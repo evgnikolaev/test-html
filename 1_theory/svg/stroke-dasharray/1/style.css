@@ -1,0 +1,60 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	width: 200px;
+	margin: 50px auto;
+}
+
+.btn {
+	width: 100%;
+	display: block;
+	height: 70px;
+	line-height: 70px;
+	text-decoration: none;
+	font-size: 28px;
+	letter-spacing: 2px;
+	text-align: center;
+	position: relative;
+	color: #000;
+}
+
+svg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+}
+
+svg rect {
+	width: 100%;
+	height: 100%;
+	fill: transparent;
+	stroke: black;
+	stroke-width: 2px;
+	stroke-dasharray: 10px 180px 20px 50px 20px 180px 20px 50px 10px;
+	transition: all .5s ease;
+
+}
+
+
+.btn:hover rect {
+	stroke-dasharray: 200px 0px 70px 0px 200px 0px 70px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

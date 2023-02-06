@@ -1,0 +1,47 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.wrapper {
+
+}
+
+.path {
+	stroke: blue;
+	stroke-width: 2px;
+	fill: none;
+
+	animation-name: active-path;
+	animation-fill-mode: forwards;
+	animation-duration: 6s;
+	animation-timing-function: ease;
+	/*animation-iteration-count: infinite;*/
+
+	/*stroke-dasharray: 1581;*/
+	/*stroke-dashoffset: 1581;*/
+	transition: all 1s ease;
+}
+
+
+/* запуск в обратную сторону */
+@keyframes active-path {
+	0%{
+		stroke-dasharray: 0,1581;
+		stroke-dashoffset: 0;
+	}
+	100% {
+		stroke-dasharray: 1581,0;
+		stroke-dashoffset: 1581;
+	}
+}
+
+
+
+
+
+
+
+
+
